@@ -12,7 +12,7 @@
            <div class="row" style="float: right">
            <div class="form-group">
            <div class="input-group">
-            <input class="form-control" type="text" name="data" placeholder="Enter the account to look for" maxlength="50" value="${data }" required/>
+            <input class="form-control" type="text" name="data" placeholder="Search by username" maxlength="50" value="${data }" required/>
             <span class="input-group-btn">
              <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span style="margin-left:2px;"><i class="fa fa-search"></i> Search</span></button>
              </span>
@@ -37,7 +37,7 @@
            <tr>
            <td></td>
           <td>${u.taiKhoanDangNhap }</td> 
-          <td><fmt:formatDate value="${u.ngayDangNhap }" pattern="d/M/yyyy"/></td>
+          <td><fmt:formatDate value="${u.ngayDangNhap }" pattern="dd/MM/yyyy"/></td>
           <td><fmt:formatDate value="${u.gioDangNhap }" pattern="HH:mm"/></td>
          
           </tr>

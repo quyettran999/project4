@@ -24,15 +24,15 @@
 		</div>
 	</c:if>
 </div>
-<div class="container">
-	<div class="breadcrumb" style="box-shadow: 1px 1px 5px #888888;">
-		<div>
+<div class="container" >
+	<div class="breadcrumb " style="box-shadow: 1px 1px 5px #888888;">
+		
 			<frm:form action="actionaddlp" modelAttribute="loaiphong">
 				<div class="form-group">
-					<label for="tenLoaiPhong" style="font-weight: bold;">Room Type-name:</label>
+					<label for="tenLoaiPhong" style="font-weight: bold;">Room Type Name:</label>
 					<div class="col-sm-10">
 						<frm:input id="tenLoaiPhong" class="form-control"
-							path="tenLoaiPhong" maxlength="100" placeholder="Room Type-name..." />
+							path="tenLoaiPhong" maxlength="100" placeholder="Room Type Name..." />
 					</div>
 				</div>
 				<div class="form-group">

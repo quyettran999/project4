@@ -19,8 +19,12 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 align-self">
                         <h3 class="title-small">Homie Hotel Services</h3>
-                        <p>Our rooms are beautifully designed and comfortable and can accommodate various groups of
-                            travelers. All rooms have private bathrooms, a flat-screen TV and a safe.</p>
+                        <p>Typically, the basic hotel services include reception guests, room service, food service, restaurants in the hotel and security. 
+                        Other services offered to guests of the hotel, can be considered as bonuses. 
+						These are the laundry service, massage room, fitness gyms, conference rooms, lock boxes
+						 for valuable assets and many other things. 
+						These services can be included in the price of the room or paid separately.
+</p>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
                         <div class="features-with-17-right-tp_sur">
@@ -30,7 +34,7 @@
                             <div class="features-with-17-left2">
                                 <h5>Fitness Zone</h5>
                                 <h6><a href="#url">Swimming Pool</a></h6>
-                                <p>Enjoy breathtaking views of the city while relaxing by the rooftop swimming 
+                                <p>Enjoy breathtaking views of the city while relaxing by the roof top swimming 
                                 pool with soothing music or some great cocktails.</p>
                             </div>
                         </div>
@@ -57,7 +61,7 @@
                             <div class="features-with-17-left2">
                                 <h5>Accommodation</h5>
                                 <h6><a href="#url">High speed WiFi</a> </h6>
-                                <p>Full wifi coverage throughout our hotel area. ensure a strong connection 
+                                <p>Full wifi coverage all over our hotel. Make sure a strong internet connection 
                                     with tourists. </p>
                             </div>
                         </div>
@@ -72,7 +76,7 @@
                                 <h6><a href="#url">SPA & Wellness</a> </h6>
                                 <p>HM Spa is a place to relax with a combination
                                  of natural environment and modern style. Our method offers a wide range of massage 
-                                 and beauty treatments to help you restore balance to your body.</p>
+                                 and beauty treatments to help you recover the balance of your body.</p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +88,7 @@
                             <div class="features-with-17-left2">
                                 <h5>Safe & Secure </h5>
                                 <h6><a href="#url">Staff 24/7</a> </h6>
-                                <p>High security for customers. Ensure all personal information customers will be 
+                                <p>Highly assistant for customers. Ensure all personal information customers will be 
                                 kept confidential information in all cases.</p>
                             </div>
                         </div>
@@ -107,7 +111,7 @@
                         <div class="col-6 pr-2 mt-4">
                             <div class="grids-speci1">
                                 <span class="fa fa-television"></span>
-                                <h3 class="title-spe">Tv</h3>
+                                <h3 class="title-spe">TV</h3>
                                 <p> Satellite</p>
                             </div>
                         </div>

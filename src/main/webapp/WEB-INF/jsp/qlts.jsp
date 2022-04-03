@@ -36,12 +36,10 @@
 				</h5>
 				<hr>
 				<div class="form-group">
-					<label for="tenToChuc" style="font-weight: bold;">Name of
-						motel / hotel</label>
-
+					<label for="tenToChuc" style="font-weight: bold;">Name of motel/hotel</label>
 					<div class="col-sm-10">
 						<frm:input id="tenToChuc" class="form-control" path="tenToChuc"
-							placeholder="Enter the hostel / hotel name" required="required"
+							placeholder="Enter the motel/hotel name" required="required"
 							maxlength="25" />
 						<p style="color: darkgray;">** Display on web and print
 							invoice.</p>
@@ -52,7 +50,7 @@
 
 					<div class="col-sm-10">
 						<frm:input id="diaChi" class="form-control" path="diaChi"
-							placeholder="Enter the motel / hotel address" required="required"
+							placeholder="Enter the motel/hotel address" required="required"
 							maxlength="60" />
 						<p style="color: darkgray;">** Show on invoice.</p>
 					</div>
@@ -94,7 +92,7 @@
 							path="baoNhieuGioDau" placeholder="Enter the first hours"
 							required="required" oninput="checkMaxLenghtNumber(this,9)" />
 						<p style="color: darkgray;">** ${thongSoTheoGio.baoNhieuGioDau }
-							first time 50$, from now on only 20$ / hour.</p>
+							first hour is 50$, then only 20$/hour.</p>
 					</div>
 				</div>
 				<div class="form-group">
@@ -103,11 +101,10 @@
 					<div class="col-sm-10">
 						<frm:input type="number" id="soGioChuyenThanhNgay"
 							class="form-control" path="soGioChuyenThanhNgay"
-							placeholder="Enter the hours" required="required"
+							placeholder="Enter number of hours" required="required"
 							oninput="checkMaxLenghtNumber(this,9)" />
-						<p style="color: darkgray;">** Too
-							${thongSoTheoGio.soGioChuyenThanhNgay } Now, we will change from
-							hourly to daily.</p>
+						<p style="color: darkgray;">** From
+							${thongSoTheoGio.soGioChuyenThanhNgay } hours, we will convert from hours to days.</p>
 					</div>
 				</div>
 				<div class="container">

@@ -44,7 +44,7 @@ public class LsdvController {
 		activemenu(model);
 		model.addAttribute("titlepage", "Service history");
 		
-		DateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		if (data.equals("")) {
 			return lsdv(model);
 		}
@@ -469,7 +469,7 @@ public class LsdvController {
 		model.addAttribute("titlepage", "Service history");
 		vitrihientai = page;
 
-		DateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		if (data.equals("")) {
 			return lsdv(model);
 		}

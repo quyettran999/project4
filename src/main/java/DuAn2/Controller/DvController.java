@@ -157,7 +157,7 @@ public class DvController {
 			donDichVu.setNgayDat(date);
 			donDichVu.setGioDat(date);
 			idv.save(donDichVu);
-			model.addAttribute("message", "More success");
+			model.addAttribute("message", "Create successfully");
 			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
 			getlistdsdadat(model);
 			model.addAttribute("donDichVu", new ServiceMenu());
@@ -183,7 +183,7 @@ public class DvController {
 			donDichVu.setNgayDat(date);
 			donDichVu.setGioDat(date);
 			idv.save(donDichVu);
-			model.addAttribute("message", "More success");
+			model.addAttribute("message", "Create successfully");
 			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
 			getlistdsdadat(model);
 			model.addAttribute("donDichVu", new ServiceMenu());
@@ -209,7 +209,7 @@ public class DvController {
 			donDichVu.setNgayDat(date);
 			donDichVu.setGioDat(date);
 			idv.save(donDichVu);
-			model.addAttribute("message", "More success");
+			model.addAttribute("message", "Create successly");
 			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
 			getlistdsdadat(model);
 			model.addAttribute("donDichVu", new ServiceMenu());
@@ -253,7 +253,7 @@ public class DvController {
 		donDichVu.setDatPhong(datPhong);
 		idv.save(donDichVu);
 		
-		model.addAttribute("message", "More success");
+		model.addAttribute("message", "Create successly");
 		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
 		getlistdsdadat(model);
 		model.addAttribute("madatphong", maDatPhong);

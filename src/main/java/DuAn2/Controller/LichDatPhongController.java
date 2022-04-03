@@ -69,7 +69,7 @@ public class LichDatPhongController {
 	public String actionthemlich(ModelMap model, @ModelAttribute("lichDatPhong") CheckinCalendar lichDatPhong, @RequestParam("maPhong")Integer maPhong, @RequestParam("soPhong")Integer soPhong) {
 		lichDatPhongService.save(lichDatPhong);
 		updateCountDatLich(maPhong);
-		model.addAttribute("message", "More success.");
+		model.addAttribute("message", "Create successfully");
 		return dslichdatphong(model, maPhong, soPhong);
 	}
 	

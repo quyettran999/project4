@@ -19,7 +19,7 @@
 			<thead>
 				<tr>
 					<th></th>
-					<th style="min-width: 100px;">Full Name</th>
+					<th style="min-width: 100px;">Full name</th>
 					<th style="min-width: 130px;">Phone number</th>
 					<th style="min-width: 130px;">Email</th>
 					<th style="min-width: 150px;">Time set</th>
@@ -56,7 +56,7 @@
 </div>
 <script>
 function xoaLich(maPhong, maLich) {
-	if (confirm("You want to delete?")) 
+	if (confirm("Do you want to delete this booking reservation?")) 
     {
 	window.location="/actionxoalichds?maLich=" + maLich + "&maPhong=" + maPhong;
     }

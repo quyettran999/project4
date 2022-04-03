@@ -24,9 +24,8 @@
 			<thead>
 				<tr>
 					<th></th>
-					<th style="min-width: 100px;">Full Name</th>
+					<th style="min-width: 100px;">Full name</th>
 					<th style="min-width: 130px;">Phone number</th>
-		
 					<th style="min-width: 100px;">Identity card number</th>
 					<th style="min-width: 120px;">Deposit</th>
 					<th style="min-width: 150px;">Time set</th>
@@ -44,7 +43,7 @@
 						<td><fmt:formatNumber value="${u.tienCoc }" type="number"
 								pattern="###,###" /> $</td>
 						<td><fmt:formatDate pattern="HH:mm" value="${u.gioDat }" />
-							- <fmt:formatDate pattern="d/M/yyyy" value="${u.ngayDat }" /></td>
+							- <fmt:formatDate pattern="yyyy-MM-dd" value="${u.ngayDat }" /></td>
 						<td>${u.tenDangNhap}</td>
 						<td><button type="button" class="btn btn-primary btn-sm"
 								onclick="trahomestay(${maPhong},${u.phong.trangThai},${soPhong},${u.maDatPhong } )">Check-out</button></td>

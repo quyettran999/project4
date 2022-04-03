@@ -22,8 +22,8 @@
                     <h3 class="title-big">Contact and Access</h3>
                 </div>
                 <div class="map-content-9">
-                    <p>Officially opened in December 2019, Hotel Homie Saigon, MGallery Collection is located 
-                    in the heart of Ho Chi Minh's most vibrant district, just away from Notre Dame Cathedral, Opera House,
+                    <p>Officially opened in December 2019, Homie Hotel, MGallery Collection is located 
+                    in the centre of Ho Chi Minh's most vibrant district, just away from Notre Dame Cathedral, Opera House,
                      Central Post Office. history and other key tourist attractions a few kilometers. The hotel is just 20 
                      minutes drive from Tan Son Nhat international Airport.</p>
                 </div>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="cont-right">
                             <h6>Address</h6>
-                            <p>Address here,590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.
+                            <p>590 Cach Mang Thang 8, Ward 11, District 3, Ho Chi Minh City.
 									</p>
                         </div>
                     </div>
@@ -65,14 +65,14 @@
                 <div class="map-content-9 mt-lg-0 mt-4">
                     <form  method="post" action="/send">
                         <div class="twice-two">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Name"
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
                                 required>
                             <input type="email" class="form-control" name="to" id="to" placeholder="Email"
                                 required>
                         </div>
                         <div class="twice">
                             <input type="text" class="form-control" name="subject" id="subject"
-                                placeholder="Subject" required>
+                                placeholder="Topic" required>
                         </div>
                         <textarea name="content" class="form-control" id="content" placeholder="Message"
                             required></textarea>

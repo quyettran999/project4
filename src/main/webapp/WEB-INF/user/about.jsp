@@ -20,12 +20,12 @@
                         years.</h3>
                 </div>
                 <div class="col-lg-6">
-                    <p>Homie hotel is uniquely decorated in Asian style according to three-star standards, located in the center 
-                    of Cach Mang Thang 8 Street - in District 3. We combine a business strategy with more than 20 years of the 
-                    hospitality industry and embrace new opportunities and distribution channels to expand internet technology for hotels 
-                    to give consumers direct access. easier.</p>
-                    <p class="mt-3">Homie Hotel aims to be one of the leading hotels in Vietnam providing internet 
-                    hotel reservations and services for customers at the Hotel. Guests coming to business or entertainment will surely 
+                    <p>Homie hotel is uniquely decorated in Asian style according to three-star standard, located in the center 
+                    of Cach Mang Thang 8 Street, District 3. We combine a business strategy with more than 20 years of the 
+                    hospitality industry, embrace new opportunities and distribution channels to expand internet technology for hotel 
+                    to give consumers direct access easier.</p>
+                    <p class="mt-3">Homie Hotel aims to be one of the leading hotels in Vietnam providing 
+                    hotel reservations and services for customers via internet. Customers going on a business or entertaining will surely 
                     be impressed with the hospitality, professional service and convenience with Homie Hotel's motto: "The spirit of Vietnamese hospitality"</p>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                             <figcaption class="w3set-hny">
                                 <div>
                                     <h4>Best Luxury Rooms <span> Hotels</span></h4>
-                                    <p>Cool view </p>
+                                    <p>Beautiful view </p>
                                 </div>
 
                             </figcaption>
@@ -93,7 +93,7 @@
                                 <div class="icon"> <span class="fa fa-file-text-o" aria-hidden="true"></span></div>
                                 <div class="icon-info">
                                     <h5>Welcome Drink</h5>
-                                    <p> the bar so that people can relax or work in elegant atmosphere and harmonious music. 
+                                    <p> The bar is in order to people can relax or work in the elegant atmosphere with harmonious music. 
                                     You can enjoy special drinks in the menu. </p>
 
                                 </div>
@@ -105,7 +105,7 @@
                                 <div class="icon-info">
                                     <h5>Spa</h5>
                                     <p> Our method offers a wide range of massage and beauty treatments to 
-                                    help you restore balance to your body. </p>
+                                    help you recover the balance of your body. </p>
                                 </div>
                             </div>
                         </div>
@@ -114,8 +114,8 @@
                                 <div class="icon"> <span class="fa fa-clone" aria-hidden="true"></span></div>
                                 <div class="icon-info">
                                     <h5>WIFI Areas</h5>
-                                    <p> Full wifi coverage throughout our hotel area. ensure a strong connection 
-                                    with tourists </p>
+                                    <p> Full wifi coverage all over our hotel. Make sure a strong connection 
+                                    with customers</p>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
                                 <div class="icon"> <span class="fa fa-trophy" aria-hidden="true"></span></div>
                                 <div class="icon-info">
                                     <h5>GYM</h5>
-                                    <p> We provide quality and wellness care to customers with treadmill
+                                    <p> We provide quality and wellness care to customers with many gym equipments such as treadmill
                                     , bike and gym weights.</p>
 
                                 </div>
@@ -148,7 +148,7 @@
 					<div class="team-info">
 						<div class="caption">
 							<h4>VO NGUYEN HOANG QUAN</h4>
-							<h6>Leader Team</h6>
+							<h6>Member & Co-Admin</h6>
 						</div>
 					</div>
 				</div>
@@ -160,7 +160,7 @@
 					<div class="team-info">
 						<div class="caption">
 							<h4>PHAN THI TUYET NHUNG</h4>
-							<h6>Member & Co-Admin</h6>
+							<h6>Team Leader</h6>
 						</div>
 					</div>
 				</div>
@@ -172,7 +172,7 @@
 					<div class="team-info">
 						<div class="caption">
 							<h4>DOAN CHI TOAN</h4>
-							<h6>member & Co-Database</h6>
+							<h6>member & Co-Templates</h6>
 						</div>
 					</div>
 				</div>
@@ -184,7 +184,7 @@
 					<div class="team-info">
 						<div class="caption">
 							<h4>TRAN THANH HAI</h4>
-							<h6>member & Co-Templates</h6>
+							<h6>member & Co-Database</h6>
 						</div>
 					</div>
 				</div>
@@ -199,13 +199,13 @@
         <div class="container py-lg-3">
             <div class="row align-items-center">
                 <div class="col-lg-6 title">
-                    <h3 class="title-big">We have a great funfact! Relax & Enjoy your Holiday</h3>
-                    <p class="mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, soluta impedit.
-                        Consequatur,
-                        quasi mollitia? Adipisci exercitationem amet dolore expedita repudiandae voluptatem impedit ipsa
-                        vero
-                        repellendus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio molestiae ex aut
-                        possimus atque explicabo nostrum recusandae ab quisquam at!</p>
+                    <h3 class="title-big">Our hotel is a great destination for you! Relax & Enjoy your Holiday</h3>
+                    <p class="mt-4">Hotel rooms have everything you need for a pleasant stay: large comfortable beds covered with 
+                        special bedspreads that get made by themselves, and bathrooms that are clean and shiny. 
+                        The pictures on the wall are always properly aligned, and everything always functions perfectly. 
+                        Someone else makes sure that everything if functional, neat and tidy only for you. 
+                        A hotel room is made to accommodate you in the best possible way, 
+                        to offer everything you need and to spare you from anything that could bother you.</p>
                 </div>
                 <div class="col-lg-6 main-cont-wthree-fea text-center">
                     <div class="row">
@@ -227,7 +227,7 @@
                             <div class="grids-speci1">
                                 <span class="fa fa-briefcase"></span>
                                 <h3 class="title-spe">158</h3>
-                                <p>Employers</p>
+                                <p>Staffs</p>
                             </div>
                         </div>
                         <div class="col-6 pl-2 mt-4">
@@ -249,7 +249,7 @@
     <div class="testimonials py-5">
         <div class="container text-center py-lg-3">
             <div class="heading text-center mx-auto">
-                <h3 class="title-big text-center">Our Testimonials</h3>
+                <h3 class="title-big text-center">Our Commits</h3>
             </div>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -259,10 +259,7 @@
                                 <div class="img-circle">
                                     <img src="images/team1.jpg" class="img-fluid rounded" alt="client image">
                                 </div>
-                                <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit id
-                                    accusantium
-                                    officia quod quasi necessitatibus perspiciatis Harum error provident
-                                    quibusdam tenetur.</div>
+                                <div class="message">The best place to be.</div>
                                 <div class="name">- HOANG QUAN</div>
                             </div>
                         </div>
@@ -271,10 +268,7 @@
                                 <div class="img-circle">
                                     <img src="images/team2.jpg" class="img-fluid rounded" alt="client image">
                                 </div>
-                                <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit id
-                                    accusantium
-                                    officia quod quasi necessitatibus perspiciatis Harum error provident
-                                    quibusdam tenetur.</div>
+                                <div class="message">The most memorable rest time starts here.</div>
                                 <div class="name">- TUYET NHUNG</div>
                             </div>
                         </div>
@@ -283,10 +277,7 @@
                                 <div class="img-circle">
                                     <img src="images/team3.jpg" class="img-fluid rounded" alt="client image">
                                 </div>
-                                <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit id
-                                    accusantium
-                                    officia quod quasi necessitatibus perspiciatis Harum error provident
-                                    quibusdam tenetur.</div>
+                                <div class="message">Explore your destination with us.</div>
                                 <div class="name">-CHI TOAN </div>
                             </div>
                         </div>
@@ -295,10 +286,7 @@
                                 <div class="img-circle">
                                     <img src="images/team4.jpg" class="img-fluid rounded" alt="client image">
                                 </div>
-                                <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit id
-                                    accusantium
-                                    officia quod quasi necessitatibus perspiciatis Harum error provident
-                                    quibusdam tenetur.</div>
+                                <div class="message">A great adventure begins here.</div>
                                 <div class="name">- THANH HAI</div>
                             </div>
                         </div>

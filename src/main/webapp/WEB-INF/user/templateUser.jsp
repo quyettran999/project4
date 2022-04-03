@@ -109,14 +109,14 @@
 					<ul>
 						<h6 class="footer-title-29">Useful Links</h6>
 						<li><a href="${pageContext.request.contextPath }/home">Home</a></li>
-						<li><a href="about">About hotels</a></li>
+						<li><a href="about">About Us</a></li>
 						<li><a href="blog"> Blog posts</a></li>
 						<li><a href="contact">Contact us</a></li>
 					</ul>
 				</div>
 				<div
 						class="col-lg-3 col-md-6 col-sm-5 footer-list-29 footer-3 mt-lg-0 mt-5">
-					<h6 class="footer-title-29">Latest from blog</h6>
+					<h6 class="footer-title-29">Latest blog</h6>
 					<div class="footer-post mb-4">
 						<a href="blog-single">Work Passionately</a>
 						<p class="small">

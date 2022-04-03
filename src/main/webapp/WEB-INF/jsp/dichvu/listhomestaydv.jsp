@@ -37,7 +37,7 @@
 								value="${u.tienCoc }" type="number" pattern="###,###" /> $</td>
 						<td style="white-space: nowrap;"><fmt:formatDate
 								pattern="HH:mm" value="${u.gioDat }" /> - <fmt:formatDate
-								pattern="d/M/yyyy" value="${u.ngayDat }" /></td>
+								pattern="dd/MM/yyyy" value="${u.ngayDat }" /></td>
 						<td style="white-space: nowrap;">${u.tenDangNhap}</td>
 						<td style="white-space: nowrap;"><button type="button"
 								class="btn btn-primary btn-sm"

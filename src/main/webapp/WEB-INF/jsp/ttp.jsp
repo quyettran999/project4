@@ -37,7 +37,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="number" name="data"
-							placeholder="Search by room number, floor number"
+							placeholder="Search by room number, floor"
 							oninput="checkMaxLenghtNumber(this,9)" value="${data }" required />
 						<span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
@@ -62,15 +62,12 @@
 				<tr>
 					<th style="max-width: 92px">Picture</th>
 
-					<th style="min-width: 80px; vertical-align: middle;">Room
-						number</th>
-					<th style="min-width: 80px; vertical-align: middle;">Kind of
-						room</th>
+					<th style="min-width: 80px; vertical-align: middle;">Room number</th>
+					<th style="min-width: 80px; vertical-align: middle;">Type of room</th>
 					<th style="min-width: 80px; vertical-align: middle;">Floor</th>
 					<th style="min-width: 80px; vertical-align: middle;">Convenient</th>
-
 					<th style="min-width: 80px; vertical-align: middle;">Room
-						Rates</th>
+						Rate</th>
 					<th style="min-width: 80px; vertical-align: middle;">Discount</th>
 					<th style="min-width: 80px; vertical-align: middle;">Status</th>
 
@@ -92,8 +89,8 @@
 								type="number" pattern="###,###" value="${u.giaPhong}" /> $</td>
 						<td style="vertical-align: middle;">${u.khuyenMai}%</td>
 						<td style="vertical-align: middle;"><c:if
-								test="${u.trangThai==0}">Empty</c:if>
-							<c:if test="${u.trangThai==1}">Hired</c:if></td>
+								test="${u.trangThai==0}">Vacancy</c:if>
+							<c:if test="${u.trangThai==1}">Rented</c:if></td>
 
 					</tr>
 

@@ -49,7 +49,7 @@ public class LsdtpController {
 		String data2 = httpServletRequest.getParameter("data");
 		model.addAttribute("data", data2);
 		java.util.Date datefind;
-		DateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		List<Checkin> ltim;
 		if (data2.isEmpty()) {
 			PageRequest pageRequest = PageRequest.of(0, 10);
@@ -477,7 +477,7 @@ public class LsdtpController {
 		activemenu(model);
 		Double count;
 		java.util.Date datefind;
-		DateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		List<Checkin> ltim;
 		String data2 = httpServletRequest.getParameter("data");
 		model.addAttribute("data", data2);

@@ -43,8 +43,8 @@
 					<th>Room Type</th>
 					<th>Room</th>
 					<th>Room Price</th>
-					<th>Checkin Date</th>
-					<th>Checkout Date</th>
+					<th>Check-in Date</th>
+					<th>Check-out Date</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -58,7 +58,7 @@
 						<td>${u.phong.soPhong }</td>
 						<td>${u.phong.giaPhong }$</td>
 						<td><fmt:formatDate pattern="HH:mm" value="${u.gioDat }" /> -
-							<fmt:formatDate pattern="d/M/yyyy" value="${u.ngayDat }" /></td>
+							<fmt:formatDate pattern="dd/MM/yyyy" value="${u.ngayDat }" /></td>
 
 
 						<td><c:if test="${empty u.traPhongs }">
@@ -66,7 +66,7 @@
            				</c:if> <c:forEach var="i" items="${u.traPhongs }">
 
 								<fmt:formatDate pattern="HH:mm" value="${i.gioTra }" /> - <fmt:formatDate
-									pattern="d/M/yyyy" value="${i.ngayTra }" />
+									pattern="dd/MM/yyyy" value="${i.ngayTra }" />
 
 
 							</c:forEach></td>
@@ -85,7 +85,7 @@
 			<li class="page-item prev"><a
 				href="ttkhpage?data=${data }&page=<c:if test="${vitrihientai==1 }">${vitrihientai }</c:if>
 				<c:if test="${vitrihientai>1 }">${vitrihientai-1 }</c:if>"
-				class="page-link"></a></li>
+				class="page-link"><</a></li>
 
 			<c:forEach items="${listSoLuongTrang }" var="u">
 				<li class="page-item"><a
@@ -115,7 +115,7 @@
 			<li class="page-item prev"><a
 				href="ttkhpagetim?data=${data }&page=<c:if test="${vitrihientai==1 }">${vitrihientai }</c:if>
 				<c:if test="${vitrihientai>1 }">${vitrihientai-1 }</c:if>"
-				class="page-link"></a></li>
+				class="page-link"><</a></li>
 
 			<c:forEach items="${listSoLuongTrang }" var="u">
 				<li class="page-item"><a

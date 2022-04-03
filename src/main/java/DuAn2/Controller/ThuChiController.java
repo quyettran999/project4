@@ -64,7 +64,7 @@ public class ThuChiController {
 		model.addAttribute("tongTienThu", tongTienThu);
 		model.addAttribute("tongTienChi", tongTienChi);
 		
-		model.addAttribute("titlepage", "List of revenues and expenditures");
+		model.addAttribute("titlepage", "List of revenue and expenditure");
 		activemenu(model);
 		model.addAttribute("l", l);
 		model.addAttribute("listSoLuongTrang", listSoLuongTrang(thuChiService.countThuChi(), model));
@@ -88,7 +88,7 @@ public class ThuChiController {
 		model.addAttribute("tongTienThu", tongTienThu);
 		model.addAttribute("tongTienChi", tongTienChi);
 		vitrihientai = 1;
-		model.addAttribute("titlepage", "List of revenues and expenditures");
+		model.addAttribute("titlepage", "List of revenue and expenditure");
 		activemenu(model);
 		
 		model.addAttribute("l", ltim);
@@ -117,7 +117,7 @@ public class ThuChiController {
 		thuchi.setNgayChi(date);
 		thuchi.setTenDangNhap(nguoiDung);
 		thuChiService.save(thuchi);
-		model.addAttribute("message", "More success");
+		model.addAttribute("message", "Add successfully");
 		return themthuchi(model);
 	}
 	
@@ -326,7 +326,7 @@ public class ThuChiController {
 			
 			model.addAttribute("tongTienThu", tongTienThu);
 			model.addAttribute("tongTienChi", tongTienChi);
-			model.addAttribute("titlepage", "List of revenues and expenditures");
+			model.addAttribute("titlepage", "List of revenue and expenditure");
 			vitrihientai = page;
 
 			model.addAttribute("l", l);
@@ -522,7 +522,7 @@ public class ThuChiController {
 		@RequestMapping("/thuchipagetim")
 		public String thuchipagetim(ModelMap model, @RequestParam("page") int page,@RequestParam("tungay") String tungay, @RequestParam("denngay") String denngay) throws ParseException {
 			activemenu(model);
-			model.addAttribute("titlepage", "List of revenues and expenditures");
+			model.addAttribute("titlepage", "List of revenue and expenditure");
 			vitrihientai = page;
 			
 			PageRequest pageable = PageRequest.of(page - 1, 10);

@@ -76,7 +76,7 @@ public class DptpController {
 	public String dsdattruoc(ModelMap model) {
 		activemenu(model);
 		List<CheckinCalendar> danhsach = lichDatPhongService.tongdsdatlich();
-		model.addAttribute("titlepage", "List of reservations");
+		model.addAttribute("titlepage", "List of reservation");
 		model.addAttribute("danhsach", danhsach);
 		return "dslichdatphong/tongdslichdatphong";
 	}
@@ -98,7 +98,7 @@ public class DptpController {
 
 		if (l.isEmpty()) {
 
-			model.addAttribute("message", "There are no rooms");
+			model.addAttribute("message", "There is no room");
 		}
 		model.addAttribute("ltang", ltang);
 		model.addAttribute("titlepage", "Check-in / Check-out");
@@ -124,7 +124,7 @@ public class DptpController {
 
 		if (l.isEmpty()) {
 
-			model.addAttribute("message", "There are no rooms");
+			model.addAttribute("message", "There is no room");
 		}
 		model.addAttribute("ltang", ltang);
 		model.addAttribute("titlepage", "Check-in / Check-out");
@@ -150,7 +150,7 @@ public class DptpController {
 
 		if (l.isEmpty()) {
 
-			model.addAttribute("message", "There are no rooms");
+			model.addAttribute("message", "There is no room");
 		}
 		model.addAttribute("ltang", ltang);
 		model.addAttribute("titlepage", "Check-in / Check-out");
@@ -176,7 +176,7 @@ public class DptpController {
 
 		if (l.isEmpty()) {
 
-			model.addAttribute("message", "There are no rooms");
+			model.addAttribute("message", "There is no room");
 		}
 		model.addAttribute("ltang", ltang);
 		model.addAttribute("titlepage", "Check-in / Check-out");
@@ -223,7 +223,7 @@ public class DptpController {
 	public String ClickVoTrangDatPhong(ModelMap model, int maPhong, int soPhong) {
 		Room ttphong = ittp.findById(maPhong).get();
 		model.addAttribute("thongtinphong", ttphong);
-		model.addAttribute("titlepage", "Reservations number " + soPhong);
+		model.addAttribute("titlepage", "Reservation number " + soPhong);
 		return "dptp/dp";
 	}
 
@@ -347,7 +347,7 @@ public class DptpController {
 		model.addAttribute("sophong", soPhong);
 		model.addAttribute("tiencoc", getdatphong.getTienCoc());
 		model.addAttribute("getdatphong", getdatphong);
-		model.addAttribute("titlepage", "Check out number " + soPhong);
+		model.addAttribute("titlepage", "Check-out number " + soPhong);
 		model.addAttribute("maDatPhong", maDatPhong);
 		model.addAttribute("tongTien", tongTien);
 		model.addAttribute("tongTiendv", tongTiendv);
@@ -543,7 +543,7 @@ public class DptpController {
 		
 		ittp.save(p);
 
-		model.addAttribute("message", "Check-out was successful");
+		model.addAttribute("message", "Check-out successful");
 		return dptp(model);
 	}
 

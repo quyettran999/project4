@@ -36,20 +36,20 @@
 			</tr>
 			<tr>
 				<td class="ThoiGianThueLable">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:if
-						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">Number of days rented</c:if>
-					<c:if test="${getdatphong.loaiDat=='theogio'}">Number of hours rented</c:if></td>
+						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">Number rented days</c:if>
+					<c:if test="${getdatphong.loaiDat=='theogio'}">Number rented hours</c:if></td>
 				<td class="ThoiGianThueValue"><c:if
-						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">${songaythue } Days</c:if>
-					<c:if test="${getdatphong.loaiDat=='theogio'}">${soGioThue } Hours</c:if></td>
+						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">${songaythue} Days</c:if>
+					<c:if test="${getdatphong.loaiDat=='theogio'}">${soGioThue} Hours</c:if></td>
 			</tr>
 			<tr>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discounted</td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discount</td>
 				<td>${giamgia }%</td>
 			</tr>
 			<tr>
 				<th>Service fee</th>
 				<th><fmt:formatNumber type="number" pattern="###,###"
-						value="${tongTiendv }" /> $</th>
+						value="${tongTiendv }"/> $</th>
 			</tr>
 			<c:forEach var="u" items="${listdv }">
 				<tr>
@@ -60,7 +60,7 @@
 				</tr>
 			</c:forEach>
 			<tr style="color: red;">
-				<th>Total amount to be paid</th>
+				<th>Total price</th>
 				<th class="tongTienTrai"><fmt:formatNumber type="number"
 						pattern="###,###" value="${tongTien }" /> $</th>
 			</tr>
@@ -71,7 +71,7 @@
 		<table class="table" style="font-size: 15px;">
 			<tr>
 				<th colspan="2" style="text-align: center; font-size: 24px;"><span
-					style="text-transform: uppercase;">${tenToChuc }</span></th>
+					style="text-transform: uppercase;">${tenToChuc}</span></th>
 			</tr>
 			<tr>
 				<td
@@ -105,22 +105,22 @@
 			</tr>
 			<tr>
 				<td class="ThoiGianThueLable">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:if
-						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">Number of days rented</c:if>
-					<c:if test="${getdatphong.loaiDat=='theogio'}">Số giờ đã thuê</c:if></td>
+						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">Number rented days</c:if>
+					<c:if test="${getdatphong.loaiDat=='theogio'}">Number rented hours</c:if></td>
 				<td class="ThoiGianThueValue"><c:if
-						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">${songaythue } Days</c:if>
-					<c:if test="${getdatphong.loaiDat=='theogio'}">${soGioThue } Hours</c:if></td>
+						test="${getdatphong.loaiDat=='theongay' || getdatphong.loaiDat=='homestay'}">${songaythue} Days</c:if>
+					<c:if test="${getdatphong.loaiDat=='theogio'}">${soGioThue} Hours</c:if></td>
 			</tr>
 			<tr>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discounted</td>
-				<td>${giamgia }%</td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discount</td>
+				<td>${giamgia}%</td>
 			</tr>
 			<tr>
 				<th>Service fee</th>
 				<th><fmt:formatNumber type="number" pattern="###,###"
-						value="${tongTiendv }" /> $</th>
+						value="${tongTiendv}" /> $</th>
 			</tr>
-			<c:forEach var="u" items="${listdv }">
+			<c:forEach var="u" items="${listdv}">
 				<tr>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${u.dichVu.tenDichVu }
 						x${u.soLuong }</td>
@@ -129,7 +129,7 @@
 				</tr>
 			</c:forEach>
 			<tr style="color: red;">
-				<th>Total amount to be paid</th>
+				<th>Total price</th>
 				<th class="tongTienTrai"><fmt:formatNumber type="number"
 						pattern="###,###" value="${tongTien }" /> $</th>
 			</tr>
@@ -148,14 +148,14 @@
 					onblur="changeTime()" />
 			</div>
 			<div class="form-group">
-				<label for="ngayTra" style="font-weight: bold;">Pay day:</label>
+				<label for="ngayTra" style="font-weight: bold;">Pay date:</label>
 				<frm:input id="ngayTra" class="form-control" path="ngayTra"
 					type="date" value="${ngayhientai }" max="9999-12-31"
 					required="required" onblur="changeTime()" />
 			</div>
 			<div class="form-group">
 				<label id="tongTienPhai" for="tongtien"
-					style="font-weight: bold; color: red; font-size: 18px;">Total amount to be paid:&nbsp;&nbsp;&nbsp;
+					style="font-weight: bold; color: red; font-size: 18px;">Total price:&nbsp;&nbsp;&nbsp;
 					<fmt:formatNumber
 						type="number" pattern="###,###" value="${tongTien }" /> $
 				</label>
@@ -177,7 +177,7 @@
 						</div>
 						<div class="modal-body">
 							<h6>
-								You want to check out <strong>${sophong }</strong>?
+								Do you want to check out <strong>${sophong }</strong>?
 							</h6>
 						</div>
 						<input id="soPhong" type="hidden" value="${sophong }"> <input

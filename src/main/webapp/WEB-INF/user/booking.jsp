@@ -11,7 +11,7 @@
 			<div class="booking-top-gds">
 				<div class="booking-forms-16-info align-self">
 					<h5>Your Reservation</h5>
-					<h3 class="title-big">Select the Room, check for availability
+					<h3 class="title-big">Select the Room, check for available room
 						and book it.</h3>
 
 				</div>
@@ -47,16 +47,16 @@
 								<div class="hny-frm_grid">
 									<h5>Check-in Date</h5>
 									<form:input id="checkInDate" path="checkInDate"
-										name="checkInDate" type="date" placeholder="Check In Date"
+										name="checkInDate" type="date" placeholder="Check-in Date"
 										required=""></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Check-out Date</h5>
 									<form:input id="checkOutDate" path="checkOutDate"
-										name="checkOutDate" type="date" placeholder="Check Out Date"
+										name="checkOutDate" type="date" placeholder="Check-out Date"
 										required=""></form:input>
 									<form:input path="roomCode" name="roomCode" type="hidden"
-										placeholder="Room code"></form:input>
+										placeholder="Room ID"></form:input>
 								</div>
 								<c:if test="${show}">
 									<div class="hny-frm_grid">
@@ -73,7 +73,7 @@
 							<input type="submit"
 								class="btn btn-style btn-secondary book mt-3"
 								style="background: #f57b51; color: #fff" value="Book Now" />
-							<p class="already">You are booking as guest.</p>
+							<p class="already">You are booking as a guest.</p>
 							<p class="already" style="color: red">${error}</p>
 							<p class="already" style="color: #34ce57">${errors}</p>
 						</form:form>

@@ -13,7 +13,7 @@
 </div>
 <div class="container">
 	<button type="button" class="btn btn-success"
-		style="margin-bottom: 10px;" onclick="backthuchi()">Come back</button>
+		style="margin-bottom: 10px;" onclick="backthuchi()">Go back</button>
 	<div class="breadcrumb" style="box-shadow: 1px 1px 5px #888888;">
 		<div>
 			<frm:form action="themthuchipost" modelAttribute="thuchi">
@@ -35,10 +35,10 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="soTien" style="font-weight: bold;">amount of money:</label>
+					<label for="soTien" style="font-weight: bold;">Price:</label>
 					<div class="col-sm-10">
 						<frm:input id="soTien" type="number" class="form-control"
-							path="soTien" placeholder="Enter the amount"
+							path="soTien" placeholder="Enter price"
 							oninput="checkMaxLenghtNumber(this,12)" required="required" />
 					</div>
 				</div>

@@ -37,7 +37,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="number" name="data"
-							placeholder="Tìm theo mã, số, tầng" maxlength="9"
+							placeholder="Search by id, room number, floor" maxlength="9"
 							value="${data }" required /> <span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
@@ -59,23 +59,17 @@
 					<th style="max-width: 92px">Picture</th>
 					<th style="min-width: 80px; vertical-align: middle;">Room
 						number</th>
-					<th style="min-width: 80px; vertical-align: middle;">Kind of
-						room</th>
+					<th style="min-width: 80px; vertical-align: middle;">Type of room</th>
 					<th style="min-width: 80px; vertical-align: middle;">Floor</th>
 					<th style="min-width: 80px; vertical-align: middle;">Convenient</th>
-
-					<th style="min-width: 80px; vertical-align: middle;">Room rate
-						/ day</th>
-					<th style="min-width: 80px; vertical-align: middle;">First
-						hour price</th>
-					<th style="min-width: 80px; vertical-align: middle;">Prices
-						for the next hour</th>
-					<th style="min-width: 80px; vertical-align: middle;">Homestay
-						price</th>
+					<th style="min-width: 80px; vertical-align: middle;">Room rate/day</th>
+					<th style="min-width: 80px; vertical-align: middle;">First hour rate</th>
+					<th style="min-width: 80px; vertical-align: middle;">Next hour rate</th>
+					<th style="min-width: 80px; vertical-align: middle;">Homestay price</th>
 
 					<th style="min-width: 80px; vertical-align: middle;">Discount</th>
 					<th style="min-width: 80px; vertical-align: middle;">Status</th>
-					<th style="width: auto; vertical-align: middle;">Act</th>
+					<th style="width: auto; vertical-align: middle;">Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -102,16 +96,16 @@
 								type="number" pattern="###,###" value="${u.giaHomestay}" /> $</td>
 						<td style="vertical-align: middle;">${u.khuyenMai}%</td>
 						<td style="vertical-align: middle;"><c:if
-								test="${u.trangThai==0}">Empty</c:if>
-							<c:if test="${u.trangThai==1}">Hired</c:if></td>
+								test="${u.trangThai==0}">Vacancy</c:if>
+							<c:if test="${u.trangThai==1}">Rented</c:if></td>
 						<td style="vertical-align: middle;"><button type="button"
 								class="btn btn-warning btn-sm" data-toggle="modal"
 								data-target="#myModalsua${u.maPhong}">
-								<i class="fa fa-edit"></i> Edit
+								<i class="fa fa-edit"></i>Edit
 							</button>
 							<button type="button" class="btn btn-danger btn-sm"
 								data-toggle="modal" data-target="#myModalxoa${u.maPhong}">
-								<i class="fa fa-trash-o"></i> Delete
+								<i class="fa fa-trash-o"></i>Delete
 							</button></td>
 					</tr>
 
@@ -513,12 +507,12 @@ span.onclick = function() {
 								</div>
 								<div class="modal-body">
 									<h6>
-										You want to delete the room code is <strong>${u.maPhong}?</strong>
+										Do you want to delete room id <strong>${u.maPhong}</strong>?
 									</h6>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default"
-										data-dismiss="modal">Cancek</button>
+										data-dismiss="modal">Cancel</button>
 									<a href="deletephong?maphong=${u.maPhong}"
 										class="btn btn-success">Agree</a>
 								</div>
@@ -537,7 +531,7 @@ span.onclick = function() {
 									<div class="modal-header">
 
 										<h4 class="modal-title" style="font-weight: bold;">
-											Fix the room code is<strong>${u.maPhong }</strong>
+											Edit room id <strong>${u.maPhong }</strong>
 										</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 									</div>
@@ -553,14 +547,14 @@ span.onclick = function() {
 											<label for="sophong" style="font-weight: bold;">Room
 												number:</label>
 											<frm:input path="soPhong" class="form-control input-sm"
-												id="sophong" type="number" placeholder="Enter the room number"
+												id="sophong" type="number" placeholder="Enter room number"
 												value="${u.soPhong }" oninput="checkMaxLenghtNumber(this,9)" />
 										</div>
 
 										<div class="form-group">
 											<label for="tang" style="font-weight: bold;">Floor</label>
 											<frm:input path="tang" class="form-control input-sm"
-												id="tang" type="number" placeholder="Enter the floor number"
+												id="tang" type="number" placeholder="Enter floor number"
 												value="${u.tang }" oninput="checkMaxLenghtNumber(this,2)" />
 										</div>
 
@@ -571,29 +565,28 @@ span.onclick = function() {
 											<frm:label path="tienNghi" id="tienNghi"></frm:label>
 											<br>
 											<frm:checkbox id="dieuhoa${u.maPhong }" path="tienNghi"
-												value="Air conditioning" label="  Điều hòa" />
+												value="AC" label="AC" />
 											&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 											<frm:checkbox id="quat${u.maPhong }" path="tienNghi"
-												value="Fan" label="  Quạt" />
+												value="Fan" label="Fan" />
 											&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 											<frm:checkbox id="tivi${u.maPhong }" path="tienNghi"
-												value="Television" label="  Tivi" />
+												value="Television" label="Television" />
 											<br>
 
 											<frm:checkbox id="nuocnonglanh${u.maPhong }" path="tienNghi"
-												value="Hot and cold water" label="  Hot and cold water" />
+												value="Hot and cold water" label="Hot and cold water" />
 											&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 											<frm:checkbox id="vitritot${u.maPhong }" path="tienNghi"
-												value="The good place
-" label="  The good place" />
+												value="Nice view" label="Nice view" />
 
 
 											<script>
-   <c:if test="${u.tienNghi.contains('Điều hòa')}">document.getElementById("dieuhoa${u.maPhong }").checked = true;</c:if>
-   <c:if test="${u.tienNghi.contains('Quạt')}">document.getElementById("quat${u.maPhong }").checked = true;</c:if>
-   <c:if test="${u.tienNghi.contains('Tivi')}">document.getElementById("tivi${u.maPhong }").checked = true;</c:if>
-   <c:if test="${u.tienNghi.contains('Nước nóng lạnh')}">document.getElementById("nuocnonglanh${u.maPhong }").checked = true;</c:if>
-   <c:if test="${u.tienNghi.contains('Vị trí tốt')}">document.getElementById("vitritot${u.maPhong }").checked = true;</c:if>
+   <c:if test="${u.tienNghi.contains('AC')}">document.getElementById("dieuhoa${u.maPhong }").checked = true;</c:if>
+   <c:if test="${u.tienNghi.contains('Fan')}">document.getElementById("quat${u.maPhong }").checked = true;</c:if>
+   <c:if test="${u.tienNghi.contains('Television')}">document.getElementById("tivi${u.maPhong }").checked = true;</c:if>
+   <c:if test="${u.tienNghi.contains('Hot and cold water')}">document.getElementById("nuocnonglanh${u.maPhong }").checked = true;</c:if>
+   <c:if test="${u.tienNghi.contains('Nice view')}">document.getElementById("vitritot${u.maPhong }").checked = true;</c:if>
    
 
 </script>
@@ -602,8 +595,7 @@ span.onclick = function() {
 
 										<div class="form-group">
 
-											<label for="loaiPhong" style="font-weight: bold;">Kind
-												of room:</label>
+											<label for="loaiPhong" style="font-weight: bold;">Type of room:</label>
 											<frm:select path="loaiPhong.maLoaiPhong"
 												class="form-control input-sm" id="loaiPhong">
 												<c:forEach items="${listLoaiPhong }" var="lp">
@@ -625,16 +617,16 @@ span.onclick = function() {
 
 										<div class="form-group">
 											<label for="giaPhong" style="font-weight: bold;">Room
-												Rates:</label>
+												Rate:</label>
 											<frm:input path="giaPhong" class="form-control input-sm"
 												id="giaPhong" type="number"
-												placeholder="Enter the room rate" value="${u.giaPhong }"
+												placeholder="Enter room rate" value="${u.giaPhong }"
 												oninput="checkMaxLenghtNumber(this,12)" />
 										</div>
 
 										<div class="form-group">
 											<label for="giaPhongGioDau" style="font-weight: bold;">Room
-												rates first hour:</label>
+												rate first hour:</label>
 											<frm:input path="giaPhongGioDau"
 												class="form-control input-sm" id="giaPhongGioDau"
 												type="number" placeholder="Enter the room rate first hour"
@@ -644,11 +636,11 @@ span.onclick = function() {
 
 										<div class="form-group">
 											<label for="giaPhongGioSau" style="font-weight: bold;">Room
-												rates next hour:</label>
+												rate next hour:</label>
 											<frm:input path="giaPhongGioSau"
 												class="form-control input-sm" id="giaPhongGioSau"
 												type="number"
-												placeholder="Enter the room rate for the next hour"
+												placeholder="Enter the room rate next hour"
 												value="${u.giaPhongGioSau }"
 												oninput="checkMaxLenghtNumber(this,12)" />
 										</div>
@@ -668,7 +660,7 @@ span.onclick = function() {
 											<label for="khuyenMai" style="font-weight: bold;">Discount:</label>
 											<frm:input path="khuyenMai" class="form-control input-sm"
 												id="khuyenMai" type="number"
-												placeholder="Enter a discount percentage" min="0" max="100"
+												placeholder="Enter discount" min="0" max="100"
 												value="${u.khuyenMai }"
 												oninput="checkMaxLenghtNumber(this,3)" />
 										</div>
@@ -769,7 +761,7 @@ span.onclick = function() {
         if (f.size > 8388608 || f.fileSize > 8388608)
         {
            //show an alert to the user
-           alert("Picture size exceeds the limit of 8 MB");
+           alert("Picture size exceeds 8 MB");
 
            //reset file upload control
            this.value = null;

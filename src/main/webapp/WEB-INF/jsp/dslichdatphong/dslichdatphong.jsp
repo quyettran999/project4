@@ -24,11 +24,11 @@
 				<tr>
 					<th></th>
 					<th style="min-width: 100px;">Full Name</th>
-					<th style="min-width: 130px;">Phone number</th>
+					<th style="min-width: 130px;">Phone Number</th>
 					<th style="min-width: 130px;">Email</th>
 					<th style="min-width: 150px;">Time Set</th>
-					<th style="min-width: 150px;">Time out</th>
-					<th style="min-width: 150px;">More information</th>
+					<th style="min-width: 150px;">Time Out</th>
+					<th style="min-width: 150px;">More Information</th>
 					<th style="min-width: 120px;">Staff</th>
 					<th style="min-width: 100px;">Manipulation</th>
 				</tr>

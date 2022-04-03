@@ -11,7 +11,7 @@
 						<div class="banner-info">
 							<div class="container">
 								<div class="banner-info-bg">
-									<h5>Location is heavenly. Best to visit in week days to
+									<h5>Location is heavenly. Best place to visit in weekend and
 										enjoy the peaceful beauty</h5>
 									<a class="btn btn-style transparent-btn mt-sm-5 mt-4"
 									   href="service"> Our Services</a>
@@ -27,7 +27,7 @@
 						<div class="banner-info">
 							<div class="container">
 								<div class="banner-info-bg">
-									<h5>Our new hotels will play a leading role in prompting
+									<h5>Our hotel will play a leading role in prompting
 										the world peace.</h5>
 									<a class="btn btn-style transparent-btn mt-sm-5 mt-4"
 									   href="service"> Our Services</a>
@@ -80,7 +80,7 @@
 			<div class="forms-top">
 				<div class="form-right">
 					<div class="form-inner-cont">
-						<h3 class="title-small">Check Availability</h3>
+						<h3 class="title-small">Check Available Room</h3>
 						<form:form action="/search-available" method="get"
 								   class="signin-form" >
 							<div class="row book-form">
@@ -117,8 +117,8 @@
 								</div>
 
 								<div class="bottom-btn col-md-4 col-sm-6 mt-3">
-									<label>Check availability </label>
-									<input type="submit" class="btn btn-style btn-primary w-100 px-2" value="Check Availability"/>
+									<label>Check available Room </label>
+									<input type="submit" class="btn btn-style btn-primary w-100 px-2" value="Check Available Room"/>
 								</div>
 							</div>
 						</form:form>
@@ -134,14 +134,14 @@
 	<div class="container py-sm-4">
 		<div class="row">
 			<div class="col-lg-6 about-left mb-md-0 mb-5">
-				<h3 class="title-big">Relax in our Resort</h3>
+				<h3 class="title-big">Relax in our Hotel</h3>
 				<h5>We make the best for all our customers.</h5>
-				<p class="mt-3">We will be happy to assist you anytime to enjoy
+				<p class="mt-3">We will assist you anytime to enjoy
 					the unique charm and atmosphere of this lovely hotel with balance
 					and harmony. We invite you to explore the exciting array of fine
 					amenities and facilities which are designed to enhance your
 					experience. Hope you enjoy when you are in our hotel.</p>
-				<a href="about.html" class="btn btn-style btn-primary mt-sm-5 mt-4">Learn
+				<a href="about.html" class="btn btn-style btn-primary mt-sm-5 mt-4">
 					About Us</a>
 			</div>
 			<div class="col-lg-6 about-right position-relative mt-lg-0 mt-5">
@@ -183,8 +183,8 @@
 							<li><span class="fa fa-bed"></span> Double bed</li>
 							<li><span class="fa fa-bed"></span> 15sqft</li>
 						</ul>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-							recusandae, illum sequi numquam tempora voluptates?</p>
+						<p>Room is equipped with modern and luxurious wooden furniture luxury. 
+						Bathroom with luxury bath: a bathtub and separate shower.</p>
 						<a href="booking" class="btn btn-style btn-primary mt-sm-4 mt-3">Book
 							Now</a>
 					</div>
@@ -285,17 +285,17 @@
 				</div>
 				<div class="col-lg-6 mt-lg-0 mt-5 about-right-faq align-self">
 					<h6>Discover our Locations</h6>
-					<h3 class="title-big">1 Years of Hotels and Resort Experience</h3>
+					<h3 class="title-big">Many Years of Hotels and Resort Experience</h3>
 					<p class="mt-3"></p>
 					<ul class="w3l-right-book mt-4">
 						<li><span class="fa fa-check" aria-hidden="true"></span>We
 							make the best for all our customers
 						</li>
 						<li><span class="fa fa-check" aria-hidden="true"></span>Follow
-							our Resort Luxury Hotels
+							our Resort Luxury Hotel
 						</li>
 						<li><span class="fa fa-check" aria-hidden="true"></span>Luxury
-							hotels and best resorts
+							hotel and best resort
 						</li>
 						<li><span class="fa fa-check" aria-hidden="true"></span>Double
 							rooms and family rooms
@@ -315,7 +315,7 @@
 <div class="quotation py-5">
 	<div class="container py-xl-5 py-lg-3">
 		<div class="welcome-left text-center py-md-5 py-3">
-			<h3>Enjoy a Luxury experience. Discover our locaions. Relax and
+			<h3>Enjoy a Luxury experience. Discover our location. Relax and
 				enjoy your holiday</h3>
 			<a href="booking"
 			   class="btn btn-style transparent-btn mt-sm-5 mt-4 mr-2">Book Now</a>

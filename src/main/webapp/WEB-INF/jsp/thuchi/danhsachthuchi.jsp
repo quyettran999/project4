@@ -22,15 +22,15 @@
 						<input class="form-control" type="text"
 							onfocus="(this.type='date')"
 							onblur="if(this.value==''){this.type='text'}" name="tungay"
-							placeholder="Since" value="${tungay }" max="9999-12-31"
+							placeholder="From Date" value="${tungay }" max="9999-12-31"
 							required="required" />
 					</div>
-					<b>&nbsp;_&nbsp;</b>
+					<b>&nbsp;&nbsp;</b>
 					<div class="col-xs-2 input-timkiemdate">
 						<input class="form-control" type="text"
 							onfocus="(this.type='date')"
 							onblur="if(this.value==''){this.type='text'}" name="denngay"
-							placeholder="To date" value="${denngay }" max="9999-12-31"
+							placeholder="To Date" value="${denngay }" max="9999-12-31"
 							required="required" />
 					</div>
 
@@ -55,10 +55,9 @@
 					<th style="width: 50px;"></th>
 					<th style="max-width: 200px; vertical-align: middle;">Content</th>
 					<th
-						style="max-width: 200px; vertical-align: middle; white-space: nowrap;">Species</th>
+						style="max-width: 200px; vertical-align: middle; white-space: nowrap;">Type</th>
 					<th
-						style="min-width: 80px; vertical-align: middle; white-space: nowrap;">Amount
-						of money</th>
+						style="min-width: 80px; vertical-align: middle; white-space: nowrap;">Price</th>
 					<th
 						style="min-width: 80px; vertical-align: middle; white-space: nowrap;">Time</th>
 					<th
@@ -110,7 +109,7 @@
 				<li class="page-item prev"><a
 					href="thuchipage?tungay=${tungay }&denngay=${denngay }&page=<c:if test="${vitrihientai==1 }">${vitrihientai }</c:if>
 					<c:if test="${vitrihientai>1 }">${vitrihientai-1 }</c:if>"
-					class="page-link"></a></li>
+					class="page-link"><</a></li>
 
 				<c:forEach items="${listSoLuongTrang }" var="u">
 					<li class="page-item"><a
@@ -142,7 +141,7 @@
 				<li class="page-item prev"><a
 					href="thuchipagetim?tungay=${tungay }&denngay=${denngay }&page=<c:if test="${vitrihientai==1 }">${vitrihientai }</c:if>
 					<c:if test="${vitrihientai>1 }">${vitrihientai-1 }</c:if>"
-					class="page-link"></a></li>
+					class="page-link"><</a></li>
 
 				<c:forEach items="${listSoLuongTrang }" var="u">
 					<li class="page-item"><a

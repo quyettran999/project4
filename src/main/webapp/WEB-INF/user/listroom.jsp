@@ -26,7 +26,7 @@
 						<figcaption>
 							<div>
 								<h4 class="top-text">
-									Homie Hotel room
+									Homie Hotel Room
 									<ul>
 										<li><span class="fa fa-star"  style="color: gold"></span></li>
 										<li><span class="fa fa-star"  style="color: gold"></span></li>
@@ -48,8 +48,8 @@
 							<li><span class="fa fa-bed"></span> 2sqft</li>
 						</ul>
 						<p>Fully furnished, luxurious furniture, service, room of
-							3-star standard or above, attentive service staff, especially,
-							the room is very clean.</p>
+							3-star standard or above, attentive service staffs, especially,
+							the room is very modern.</p>
 
 						<div class="room-info-bottom">
 							<ul class="room-amenities">
@@ -74,7 +74,7 @@
 						<figcaption>
 							<div>
 								<h4 class="top-text">
-									Homie Hotel room
+									Homie Hotel Room
 									<ul>
 										<li><span class="fa fa-star"  style="color: gold"></span></li>
 										<li><span class="fa fa-star"  style="color: gold"></span></li>
@@ -89,15 +89,15 @@
 					</figure>
 					<div class="room-info">
 						<h3 class="room-title">
-							<a href="#url">Vip Room</a>
+							<a href="#url">VIP Room</a>
 						</h3>
 						<ul class="mb-3">
-							<li><span class="fa fa-users"></span> 2-4 Guests</li>
+							<li><span class="fa fa-users"></span> 2-4 Customers</li>
 							<li><span class="fa fa-bed"></span> 4sqft</li>
 						</ul>
 						<p>Fully furnished, luxurious furniture, service, room of
-							3-star standard or above, attentive service staff, especially,
-							the room is very clean.</p>
+							3-star standard or above, attentive service staffs, especially,
+							the room is very modern.</p>
 						<div class="room-info-bottom">
 							<ul class="room-amenities">
 								<li><a href="#url"><span class="fa fa-bed" title="Beds"></span></a></li>
@@ -121,7 +121,7 @@
 						<figcaption>
 							<div>
 								<h4 class="top-text">
-									Homie Hotel room
+									Homie Hotel Room
 									<ul>
 										<li><span class="fa fa-star"  style="color: gold"></span></li>
 										<li><span class="fa fa-star"  style="color: gold"></span></li>
@@ -139,12 +139,12 @@
 							<a href="#url">Homestay Room</a>
 						</h3>
 						<ul class="mb-3">
-							<li><span class="fa fa-users"></span> 2-8 Guests</li>
+							<li><span class="fa fa-users"></span> 2-8 Customers</li>
 							<li><span class="fa fa-bed"></span> 8sqft</li>
 						</ul>
 						<p>Fully furnished, luxurious furniture, service, room of
-							3-star standard or above, attentive service staff, especially,
-							the room is very clean.</p>
+							3-star standard or above, attentive service staffs, especially,
+							the room is very modern.</p>
 						<div class="room-info-bottom">
 							<ul class="room-amenities">
 								<li><a href="#url"><span class="fa fa-bed" title="Beds"></span></a></li>
@@ -176,11 +176,10 @@
 			</div>
 			<div class="col-lg-6 roomsingle mt-lg-0 mt-4">
 				<h3 class="title-small">The Room</h3>
-				<p class="roomsingle mt-3">Duis nisi sapien, elementum finibus
-					fermentum eget, aliquet leo. Mauris hendrerit vel ex. Quisque vitae
-					luctus massa. Phasellus sed aliquam leo. Vestibulum ullamcorper a
-					massa eu fringilla. Integer ultrices finibus sed nisi. in convallis
-					felis dapibus sit amet.</p>
+				<p class="roomsingle mt-3">Prioritize a "just like home" environment.
+				Some of the guests staying at your hotel during an event travel often 
+				— especially the planners. There are a few small touches you can make 
+				that will drastically change the customer experience.</p>
 			</div>
 		</div>
 	</div>

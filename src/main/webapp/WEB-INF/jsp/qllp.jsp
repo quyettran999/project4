@@ -35,7 +35,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="text" name="data"
-							placeholder="Search by code, name" maxlength="100"
+							placeholder="Search by id, name" maxlength="100"
 							value="${data }" required /> <span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
@@ -57,9 +57,9 @@
 			<thead>
 				<tr>
 					<th style="width: 50px;"></th>
-					<th style="min-width: 100px;">Kind of room</th>
+					<th style="min-width: 100px;">Type of room</th>
 					<th style="min-width: 500px;">Description</th>
-					<th style="min-width: 100px;">Act</th>
+					<th style="min-width: 100px;">Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -71,11 +71,11 @@
 
 						<td><button type="button" class="btn btn-warning btn-sm"
 								data-toggle="modal" data-target="#myModalsua${u.maLoaiPhong}">
-								<i class="fa fa-edit"></i> Edit
+								<i class="fa fa-edit"></i>Edit
 							</button>
 							<button type="button" class="btn btn-danger btn-sm"
 								data-toggle="modal" data-target="#myModalxoa${u.maLoaiPhong}">
-								<i class="fa fa-trash-o"></i> Delete
+								<i class="fa fa-trash-o"></i>Delete
 							</button></td>
 					</tr>
 
@@ -95,7 +95,7 @@
 								</div>
 								<div class="modal-body">
 									<h6>
-										You want to delete the room type code is <strong>${u.maLoaiPhong}</strong>?
+										Do you want to delete room type id <strong>${u.maLoaiPhong}</strong>?
 									</h6>
 								</div>
 								<div class="modal-footer">
@@ -116,7 +116,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<h4 class="modal-title">
-										Fix the room type code is <strong>${u.maLoaiPhong }</strong>
+										Edit room type ID <strong>${u.maLoaiPhong }</strong>
 									</h4>
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
 								</div>
@@ -128,7 +128,7 @@
 												type name:</label>
 											<div class="col-sm-10">
 												<frm:input id="tenLoaiPhong" class="form-control"
-													path="tenLoaiPhong" placeholder="Enter a room type name"
+													path="tenLoaiPhong" placeholder="Enter room type name"
 													value="${u.tenLoaiPhong }" maxlength="100" />
 											</div>
 										</div>
@@ -136,7 +136,7 @@
 											<label for="moTa" style="font-weight: bold;">Description:</label>
 											<div class="col-sm-10">
 												<frm:input id="moTa" class="form-control" path="moTa"
-													placeholder="Enter a description" value="${u.moTa }" maxlength="250" />
+													placeholder="Enter description" value="${u.moTa }" maxlength="250" />
 											</div>
 										</div>
 
@@ -144,7 +144,7 @@
 
 									<div class="modal-footer">
 										<frm:button class="btn btn-warning">
-											<i class="fa fa-edit"></i>  Completed</frm:button>
+											<i class="fa fa-edit"></i>Update</frm:button>
 									</div>
 								</frm:form>
 							</div>
@@ -178,7 +178,7 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="submit" value="Sửa" /></td>
+							<td><input type="submit" value="Update" /></td>
 						</tr>
 					</frm:form>
 				</td>

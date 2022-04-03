@@ -44,15 +44,15 @@
 						<br>
 						<table>
 							<tr>
-								<td width="120px;"><frm:checkbox path="tienNghi" value="Air conditioning" label="  Air conditioning" /></td>
-								<td><frm:checkbox path="tienNghi" value="Fan" label="  Fan" /></td>
+								<td width="120px;"><frm:checkbox path="tienNghi" value="AC" label="AC" /></td>
+								<td><frm:checkbox path="tienNghi" value="Fan" label="Fan" /></td>
 							</tr>
 							<tr>
-								<td><frm:checkbox path="tienNghi" value="Tivi" label="  Television" /></td>
-								<td><frm:checkbox path="tienNghi" value="Hot and cold water" label="  Hot and cold water" /></td>
+								<td><frm:checkbox path="tienNghi" value="Television" label="Television" /></td>
+								<td><frm:checkbox path="tienNghi" value="Hot and cold water" label="Hot and cold water" /></td>
 							</tr>
 							<tr>
-								<td><frm:checkbox path="tienNghi" value="The good place" label="  The good place" /></td>
+								<td><frm:checkbox path="tienNghi" value="Nice view" label="Nice view" /></td>
 								<td></td>
 							</tr>
 						</table>
@@ -73,7 +73,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-10">
-						<label for="giaPhong" style="font-weight: bold;">Room Rates:</label>
+						<label for="giaPhong" style="font-weight: bold;">Room Rate:</label>
 						<frm:input path="giaPhong" class="form-control input-sm" id="giaPhong" type="number" placeholder="Enter the room rate" oninput="checkMaxLenghtNumber(this,12)" />
 					</div>
 				</div>
@@ -85,8 +85,8 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-10">
-						<label for="giaPhongGioSau" style="font-weight: bold;">Prices for the next hour:</label>
-						<frm:input path="giaPhongGioSau" class="form-control input-sm" id="giaPhongGioSau" type="number" placeholder="Enter the next hourly rate" oninput="checkMaxLenghtNumber(this,12)"/>
+						<label for="giaPhongGioSau" style="font-weight: bold;">Next hour price:</label>
+						<frm:input path="giaPhongGioSau" class="form-control input-sm" id="giaPhongGioSau" type="number" placeholder="Enter the next hour price" oninput="checkMaxLenghtNumber(this,12)"/>
 					</div>
 				</div>
 				<div class="form-group">
@@ -98,11 +98,11 @@
 				<div class="form-group">
 					<div class="col-sm-10">
 						<label for="khuyenMai" style="font-weight: bold;">Discount:</label>
-						<frm:input path="khuyenMai" class="form-control input-sm" id="khuyenMai" type="number" placeholder="Enter a discount percentage" min="0" max="100" oninput="checkMaxLenghtNumber(this,3)"/>
+						<frm:input path="khuyenMai" class="form-control input-sm" id="khuyenMai" type="number" placeholder="Enter discount" min="0" max="100" oninput="checkMaxLenghtNumber(this,3)"/>
 					</div>
 				</div>
 				<div class="container">
-					<frm:button type="submit" class="btn btn-success btn-xs">More</frm:button>
+					<frm:button type="submit" class="btn btn-success btn-xs">Add</frm:button>
 				</div>
 			</frm:form>
 		</div>

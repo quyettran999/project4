@@ -82,15 +82,15 @@ s
 												<img src="hinh/vip.png" width="55px" height="23px"
 													style="margin-bottom: 5px; -webkit-filter: drop-shadow(1px 1px 1px #fff0b6); filter: drop-shadow(1px 1px 1px #fff0b6);"></img>
 											</c:if>
-											<c:if test="${u.phong.loaiPhong.tenLoaiPhong=='Thường'}">Often</c:if>
+											<c:if test="${u.phong.loaiPhong.tenLoaiPhong=='Thường'}">Normal</c:if>
 										</div>
 										<div>
-											<b>Discout: </b>${u.phong.khuyenMai } %
+											<b>Discount: </b>${u.phong.khuyenMai } %
 										</div>
 										<div>
 											<b>Status: </b>
-											<c:if test="${u.phong.trangThai==0 }">Empty</c:if>
-											<c:if test="${u.phong.trangThai==1}">Hired</c:if>
+											<c:if test="${u.phong.trangThai==0 }">Vacancy</c:if>
+											<c:if test="${u.phong.trangThai==1}">Rented</c:if>
 										</div>
 									</div>
 								</a>

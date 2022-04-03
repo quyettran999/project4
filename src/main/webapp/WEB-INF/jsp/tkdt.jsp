@@ -35,15 +35,15 @@
 							<input class="form-control" type="text"
 								onfocus="(this.type='date')"
 								onblur="if(this.value==''){this.type='text'}" name="tungay"
-								placeholder="Since" value="${tungay }" max="9999-12-31"
+								placeholder="From Date" value="${tungay }" max="9999-12-31"
 								required="required" />
 						</div>
-						<b>&nbsp;_&nbsp;</b>
+						<b>&nbsp;&nbsp;</b>
 						<div class="col-xs-2 input-timkiemdate">
 							<input class="form-control" type="text"
 								onfocus="(this.type='date')"
 								onblur="if(this.value==''){this.type='text'}" name="denngay"
-								placeholder="To date" value="${denngay }" max="9999-12-31"
+								placeholder="To Date" value="${denngay }" max="9999-12-31"
 								required="required" />
 						</div>
 
@@ -51,7 +51,7 @@
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
 									style="margin-left: 2px;"><i class="fa fa-search"></i>
-									Statistical</span>
+									Search</span>
 							</button>
 						</span>
 					</div>
@@ -115,7 +115,7 @@
 
 	<c:if test="${disableA }">
 		<br>
-		<p style="color: gray;">** Select a time period to view details</p>
+		<p style="color: gray;">** Enter date to view details</p>
 	</c:if>
 
 
@@ -155,7 +155,7 @@
 	<c:if test="${not empty checkctdtctp }">
 		<br>
 		<br>
-		<h3>Table of sales details for each room</h3>
+		<h3>Table revenue details of each room</h3>
 		<hr>
 		<div
 			style="overflow: auto; height: auto; width: 100%; box-shadow: 1px 1px 5px #888888;">
@@ -163,9 +163,9 @@
 
 
 				<tr>
-					<th>Room numbers</th>
+					<th>Room number</th>
 					<th>Number of people booked</th>
-					<th>Total money</th>
+					<th>Total price</th>
 				</tr>
 				<c:forEach var="u" items="${ctdtctp }">
 					<tr>
@@ -193,7 +193,7 @@
 				<tr>
 					<th></th>
 					<th>Content</th>
-					<th style="white-space: nowrap;">Amount of money</th>
+					<th style="white-space: nowrap;">Price</th>
 					<th style="white-space: nowrap;">Staff</th>
 				</tr>
 				<c:forEach var="u" items="${ctttt }">
@@ -222,7 +222,7 @@
 				<tr>
 					<th></th>
 					<th>Content</th>
-					<th style="white-space: nowrap;">Amount of money</th>
+					<th style="white-space: nowrap;">Price</th>
 					<th style="white-space: nowrap;">Staff</th>
 				</tr>
 				<c:forEach var="u" items="${ctttc }">

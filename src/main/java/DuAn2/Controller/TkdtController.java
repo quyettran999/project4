@@ -56,7 +56,7 @@ public class TkdtController {
 	@RequestMapping("/tkdt")
 	public String tkdt(ModelMap model) {
 		activemenu(model);
-		model.addAttribute("titlepage", "Revenue statistics");
+		model.addAttribute("titlepage", "Revenue statistic");
 		double tongTienDatPhong = 0;
 		double tongTienDichVu = 0;
 		List<Checkout> lTraPhong = (List<Checkout>) iTraPhong.findAll();
@@ -102,7 +102,7 @@ public class TkdtController {
 			Date denngayyy = new Date(denngayy.getTime());
 
 			if (tungayyy.after(denngayy)) {
-				model.addAttribute("titlepage", "Revenue statistics");
+				model.addAttribute("titlepage", "Revenue statistic");
 				model.addAttribute("message", "Invalid time");
 				return "tkdt";
 			}
@@ -120,7 +120,7 @@ public class TkdtController {
 				tongTienDichVu += lDonDichVu.get(i).getSoLuong() * lDonDichVu.get(i).getDichVu().getGiaDichVu();
 			}
 
-			model.addAttribute("titlepage", "Revenue statistics");
+			model.addAttribute("titlepage", "Revenue statistic");
 			model.addAttribute("tongTien", tongTienDatPhong);
 			model.addAttribute("tongTienDichVu", tongTienDichVu);
 			model.addAttribute("tungay", tungay);
@@ -308,7 +308,7 @@ public class TkdtController {
 
 		if (tungayyy == null && denngayyy == null) {
 			//xuất list đầu tiên
-						model.addAttribute("titlepage", "Revenue statistics");
+						model.addAttribute("titlepage", "Revenue statistic");
 						double tongTienDatPhong = 0;
 						double tongTienDichVu = 0;
 						List<Checkout> lTraPhong = (List<Checkout>) iTraPhong.findAll();
@@ -339,7 +339,7 @@ public class TkdtController {
 					} else {
 
 						// xuất list đầu tiên
-						model.addAttribute("titlepage", "Revenue statistics");
+						model.addAttribute("titlepage", "Revenue statistic");
 						double tongTienDatPhong = 0;
 						double tongTienDichVu = 0;
 						List<Checkout> lTraPhong = (List<Checkout>) iTraPhong.timtkdt(tungayyy, denngayyy);

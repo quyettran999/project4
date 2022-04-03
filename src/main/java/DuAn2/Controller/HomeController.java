@@ -156,13 +156,13 @@ public class HomeController {
         if (bookingDTO.getCheckInDate().compareToIgnoreCase(new SimpleDateFormat("yyyy-MM-dd").format(new Date())) < 0) {
             System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
             System.out.println(bookingDTO.getCheckInDate());
-            model.addAttribute("error", "Check in date can greater or equal today");
+            model.addAttribute("error", "Check-in date must greater than or equal today");
             return "booking";
         }
 
 
         if (bookingDTO.getCheckInDate().compareTo(bookingDTO.getCheckOutDate()) > -1) {
-            model.addAttribute("error", "Check in date can't greater check out date");
+            model.addAttribute("error", "Check-in date can't greater than check-out date");
             return "booking";
         }
 
@@ -188,7 +188,7 @@ public class HomeController {
         } catch (Exception re) {
             re.printStackTrace();
         }
-        model.addAttribute("errors", "Successful reservation");
+        model.addAttribute("errors", "Successfully reservation");
         return "booking";
     }
 
@@ -295,13 +295,13 @@ public class HomeController {
             System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
             //ở đây viết đúng nó hiện số chuẩn :v
             System.out.println(bookingDTO.getCheckInDate());
-            model.addAttribute("error", "Check in date can greater or equal today");
+            model.addAttribute("error", "Check-in date must greater than or equal today");
             return "bookingroom";
         }
 
 
         if (bookingDTO.getCheckInDate().compareTo(bookingDTO.getCheckOutDate()) > -1) {
-            model.addAttribute("error", "Check in date can't greater check out date");
+            model.addAttribute("error", "Check-in date can't greater than check-out date");
             return "bookingroom";
         }
 

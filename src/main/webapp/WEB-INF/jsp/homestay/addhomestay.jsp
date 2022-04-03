@@ -26,7 +26,7 @@
 <div class="container">
 	<button type="button" class="btn btn-success"
 		style="margin-bottom: 10px;"
-		onclick="backlisthomestay(${maPhong},${soPhong})">Come back</button>
+		onclick="backlisthomestay(${maPhong},${soPhong})">Go back</button>
 	<div class="breadcrumb" style="box-shadow: 1px 1px 5px #888888;">
 		<div>
 			<frm:form action="actionaddhomestay" modelAttribute="datphong">
@@ -35,7 +35,7 @@
 				<frm:hidden path="phong.maPhong" value="${maPhong }" />
 				<frm:hidden path="tenDangNhap" value="${nguoidung }" />
 				<div class="form-group">
-					<label for="hoTen" style="font-weight: bold;">Customer's full name:</label>
+					<label for="hoTen" style="font-weight: bold;">Full name:</label>
 					<frm:input id="hoTen" class="form-control" path="hoTen"
 						placeholder="Enter your first and last name" maxlength="100" required="required" />
 				</div>
@@ -49,7 +49,7 @@
 				<div class="form-group">
 					<label for="soCMND" style="font-weight: bold;">Identity card number:</label>
 					<frm:input id="soCMND" type="number" class="form-control"
-						path="soCMND" placeholder="Import identity card number"
+						path="soCMND" placeholder="Enter your identity card number"
 						oninput="checkMaxLenghtNumber(this,20)" required="required" />
 				</div>
 
@@ -58,7 +58,7 @@
 				<div class="form-group">
 					<label for="tienCoc" style="font-weight: bold;">Deposit:</label>
 					<frm:input id="tienCoc" type="number" class="form-control"
-						path="tienCoc" placeholder="Enter a deposit" required="required"
+						path="tienCoc" placeholder="Enter deposit" required="required"
 						oninput="checkMaxLenghtNumber(this,12)" />
 				</div>
 				<div class="form-group">
@@ -72,7 +72,7 @@
 						type="date" value="${ngayhientai }" max="9999-12-31"
 						required="required" />
 				</div>
-				<frm:button type="submit" class="btn btn-success btn-xs float-right">Confirm</frm:button>
+				<frm:button type="submit" class="btn btn-success btn-xs float-right">Add</frm:button>
 			</frm:form>
 		</div>
 	</div>

@@ -54,7 +54,7 @@ public class HomeStayController {
 		model.addAttribute("datphong", datphong);
 		model.addAttribute("ngayhientai", dateFormat.format(cal.getTime()));
 		model.addAttribute("giohientai", timeFormat.format(cal.getTime()));
-		model.addAttribute("titlepage", "Add guests homestay");
+		model.addAttribute("titlepage", "Add guest homestay");
 		return "homestay/addhomestay";
 	}
 
@@ -71,7 +71,7 @@ public class HomeStayController {
 		Integer countHomestay = ittp.countHomestayByMaPhong(maPhong);
 		p.setCountHomestay(countHomestay);
 		ittp.save(p);
-		model.addAttribute("message", "More success");
+		model.addAttribute("message", "Create successfully");
 		return homestay(model, maPhong, soPhong);
 	}
 

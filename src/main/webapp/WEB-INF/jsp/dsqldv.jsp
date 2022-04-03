@@ -36,7 +36,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="text" name="data"
-							placeholder="Search by code or name" maxlength="50"
+							placeholder="Search by id or name" maxlength="50"
 							value="${data }" required /> <span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
@@ -60,9 +60,9 @@
 				<tr>
 					<th style="width: 50px;"></th>
 					<th style="min-width: 250px;">Service name</th>
-					<th style="min-width: 200px;">Species</th>
-					<th style="min-width: 200px;">Prices</th>
-					<th style="min-width: 130px;">Act</th>
+					<th style="min-width: 200px;">Type</th>
+					<th style="min-width: 200px;">Price</th>
+					<th style="min-width: 130px;">Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -105,7 +105,7 @@
 								</div>
 								<div class="modal-body">
 									<h6>
-										You want to delete the service code <strong>${u.maDichVu }</strong>?
+										Do you want to delete service ID: <strong>${u.maDichVu }</strong>?
 									</h6>
 								</div>
 								<div class="modal-footer">
@@ -129,7 +129,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<h4 class="modal-title">
-										Edit service code is <strong>${u.maDichVu }</strong>
+										Edit Service ID <strong>${u.maDichVu }</strong>
 									</h4>
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
 								</div>
@@ -154,7 +154,7 @@
 													<c:if test="${u.loaiDichVu == 2 }">selected="selected"</c:if> />
 											</frm:select>
 										</div>
-										<label for="giadv">Price service:</label>
+										<label for="giadv">Service price:</label>
 										<frm:input path="giaDichVu" class="form-control input-sm"
 											id="giadv" value="${u.giaDichVu }" type="number"
 											oninput="checkMaxLenghtNumber(this,12)" />
@@ -162,7 +162,7 @@
 
 									<div class="modal-footer">
 										<frm:button class="btn btn-warning">
-											<i class="fa fa-edit"></i>  Completed</frm:button>
+											<i class="fa fa-edit"></i>Update</frm:button>
 									</div>
 								</frm:form>
 							</div>

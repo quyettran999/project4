@@ -104,7 +104,7 @@ public class DsqldvController {
 		} else {
 
 			dsqldvService.save(dichvu);
-			model.addAttribute("message", "Successfully fixed");
+			model.addAttribute("message", "Edit successfully");
 			return ViewListDsqldv(model, dichvu);
 		}
 	}
@@ -121,7 +121,7 @@ public class DsqldvController {
 		model.addAttribute("activetdv", "active");
 
 		model.addAttribute("dichvu", dichvu);
-		model.addAttribute("titlepage", "Add new services");
+		model.addAttribute("titlepage", "Add a new service");
 		return "themdsqldv";
 	}
 
@@ -144,7 +144,7 @@ public class DsqldvController {
 			dsqldvService.save(dichvu);
 			model.addAttribute("dichvu", new Service());
 			model.addAttribute("titlepage", "Service list");
-			model.addAttribute("message", "More success");
+			model.addAttribute("message", "Craete service successfully");
 
 			return "themdsqldv";
 		}

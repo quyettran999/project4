@@ -45,7 +45,7 @@
 					<label for="matKhau" style="font-weight: bold;">Password:</label>
 					<div class="col-sm-10">
 						<frm:input type="password" id="matKhau" class="form-control"
-							path="matKhau" placeholder="Enter password" maxlength="100"/>
+							path="matKhau" placeholder="Enter your password" maxlength="100"/>
 					</div>
 				</div>
 				<div class="form-group">
@@ -98,17 +98,17 @@
 				</div>
 
 				<div class="form-group">
-					<label for="Email" style="font-weight: bold;">Position:</label>
+					<label for="Position" style="font-weight: bold;">Role:</label>
 					<div class="col-sm-10">
 						<frm:select class="form-control" path="chucVu.maChucVu">
 							<frm:option value="1">Manager</frm:option>
-							<frm:option value="2">Employee</frm:option>
-							<frm:option value="3">Staff</frm:option>
+							<frm:option value="2">Staff</frm:option>
+							<frm:option value="3">User</frm:option>
 						</frm:select>
 					</div>
 				</div>
 				<div class="container">
-					<frm:button type="submit" class="btn btn-success btn-xs">Save</frm:button>
+					<frm:button type="submit" class="btn btn-success btn-xs">Add</frm:button>
 				</div>
 			</div>
 		</div>

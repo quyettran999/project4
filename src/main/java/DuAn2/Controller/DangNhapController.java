@@ -119,7 +119,7 @@ public class DangNhapController {
 		HttpSession session = httpServletRequest.getSession();
 		Account gettaikhoan = dangnhapservice.findById(session.getAttribute("nguoidung").toString()).get();
 		if (!matkhaucu.equals(gettaikhoan.getMatKhau())) {
-			model.addAttribute("messageloi", "Old password is incorrect");
+			model.addAttribute("messageloi", "Current password is incorrect");
 			taikhoan.setMatKhau("");
 			return "doimatkhau";
 		} else if (!matkhaumoi.equals(taikhoan.getMatKhau())) {
@@ -128,7 +128,7 @@ public class DangNhapController {
 			return "doimatkhau";
 		} else if (matkhaumoi.length() < 9) {
 			taikhoan.setMatKhau("");
-			model.addAttribute("messageloi", "Password must be 8 characters or more");
+			model.addAttribute("messageloi", "Password must be from 8 characters");
 			return "doimatkhau";
 		} else {
 			dangnhapservice.save(taikhoan);

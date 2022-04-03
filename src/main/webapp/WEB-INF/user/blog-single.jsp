@@ -148,7 +148,7 @@
 
 
 				<div class="leave-comment-form mt-lg-5 mt-4" id="comment">
-					<h4 class="side-title mb-0">Leave a Reply</h4>
+					<h4 class="side-title mb-0">Leave a Comment</h4>
 					<p class="mb-4">Your email address will not be published.
 						Required fields are marked *</p>
 					<form action="#" method="post">

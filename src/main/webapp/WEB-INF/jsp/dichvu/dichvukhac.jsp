@@ -7,15 +7,15 @@
 <table style="width: 100%;">
 	<tr>
 		<td>Service name:</td>
-		<td><input id="tenDichVu" class="form-control" placeholder="Import service name" maxlength="50" /></td>
+		<td><input id="tenDichVu" class="form-control" placeholder="Enter Service name..." maxlength="50" /></td>
 	</tr>
 	<tr>
 		<td>More information:</td>
-		<td><input id="thongTinThem" class="form-control" placeholder="Optional" maxlength="254" /></td>
+		<td><input id="thongTinThem" class="form-control" placeholder="Enter More information..." maxlength="254" /></td>
 	</tr>
 	<tr>
-		<td>Service prices:</td>
-		<td><input id="giaDichVu" type="number" class="form-control" placeholder="Import service prices" oninput="checkMaxLenghtNumber(this,12)"/></td>
+		<td>Service price:</td>
+		<td><input id="giaDichVu" type="number" class="form-control" placeholder="Enter Service price" oninput="checkMaxLenghtNumber(this,12)"/></td>
 	</tr>
 	<tr>
 		<td></td>

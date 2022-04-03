@@ -36,7 +36,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="text" name="data"
-							placeholder="Enter information to look for" maxlength="50"
+							placeholder="Search by username" maxlength="50"
 							value="${data }" required /> <span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
@@ -63,9 +63,9 @@
 					<th style="min-width: 80px;">Identity card</th>
 					<th style="min-width: 80px;">Phone number</th>
 					<th style="min-width: 80px;">Email</th>
-					<th style="min-width: 80px;">Position</th>
+					<th style="min-width: 80px;">Role</th>
 					<th style="min-width: 80px;">Creation time</th>
-					<th style="min-width: 80px;">Work</th>
+					<th style="min-width: 80px;">Action</th>
 				</tr>
 			</thead>
 			<c:forEach var="u" items="${lTaikhoans}">
@@ -99,13 +99,12 @@
 						<!-- Modal content-->
 						<div class="modal-content">
 							<div class="modal-header">
-								<h4 class="modal-title" style="font-weight: bold;">Delete
-									the account</h4>
+								<h4 class="modal-title" style="font-weight: bold;">Delete Account</h4>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 							<div class="modal-body">
 								<h6>
-									You want to delete the account <strong>${u.tenDangNhap}?</strong>
+									Do you want to delete <strong>${u.tenDangNhap}</strong> ?
 								</h6>
 							</div>
 							<div class="modal-footer">
@@ -127,14 +126,14 @@
 								<div class="modal-header">
 
 									<h4 class="modal-title" style="font-weight: bold;">
-										Modify your account <strong>${u.tenDangNhap }</strong>
+										Edit your account <strong>${u.tenDangNhap }</strong>
 									</h4>
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
 								</div>
 								<div class="modal-body">
 									<div class="form-group">
-										<label for="tenDangNhap" style="font-weight: bold;">User
-											name:</label> <input class="form-control input-sm" id="tenDangNhap"
+										<label for="tenDangNhap" style="font-weight: bold;">Username:</label> 
+										<input class="form-control input-sm" id="tenDangNhap"
 											placeholder="Enter your username" value="${u.tenDangNhap }"
 											disabled />
 										<frm:hidden path="tenDangNhap" value="${u.tenDangNhap }" />
@@ -143,7 +142,7 @@
 										<label for="matKhau" style="font-weight: bold;">Password:</label>
 
 										<frm:input type="password" id="matKhau" class="form-control"
-											path="matKhau" placeholder="Enter password" value=""
+											path="matKhau" placeholder="Enter your password" value=""
 											maxlength="100" />
 									</div>
 									<div class="form-group">
@@ -168,7 +167,7 @@
 											style="display: none"><fmt:formatDate
 												value="${u.ngaySinh }" pattern="yyyy-MM-dd" /></span>
 										<frm:input type="date" id="ngaySinh" class="form-control"
-											path="ngaySinh" placeholder="Choose a date of birth" value=""
+											path="ngaySinh" placeholder="Choose your date of birth" value=""
 											max="9999-12-31" />
 									</div>
 
@@ -202,20 +201,20 @@
 
 
 									<div class="form-group">
-										<label for="Email" style="font-weight: bold;">Position:</label>
+										<label for="Position" style="font-weight: bold;">Role:</label>
 
 										<frm:select class="form-control" path="chucVu.maChucVu">
 											<option value="1"
 												${u.chucVu.maChucVu == 1?"selected='selected'":"" }>Manager</option>
 												<option value="2"
-												${u.chucVu.maChucVu == 2?"selected='selected'":"" }>Employee</option>
-											<option value="3"
 												${u.chucVu.maChucVu == 2?"selected='selected'":"" }>Staff</option>
+											<option value="3"
+												${u.chucVu.maChucVu == 2?"selected='selected'":"" }>User</option>
 										</frm:select>
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="submit" class="btn btn-success">Agree</button>
+									<button type="submit" class="btn btn-success">Update</button>
 								</div>
 
 							</div>

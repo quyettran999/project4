@@ -50,7 +50,7 @@
 	   <div class="form-group">
 		<label for="matkhaucu" style="font-weight: bold;">Old password:</label>
 		<div class="col-sm-10">
-			<input type="password" name="matkhaucu" id="matkhaucu" class="form-control" placeholder="Enter your old password" maxlength="100" required="required">
+			<input type="password" name="matkhaucu" id="matkhaucu" class="form-control" placeholder="Enter your current password" maxlength="100" required="required">
 		</div>
 	</div>
 	<frm:hidden path="tenDangNhap" value="${gettaikhoan.tenDangNhap }"/>
@@ -62,7 +62,7 @@
 	<frm:hidden path="email" value="${gettaikhoan.email }"/>
 	<frm:hidden path="chucVu.maChucVu" value="${gettaikhoan.chucVu.maChucVu }"/>
 	<div class="form-group">
-		<label for="matkhaumoi" style="font-weight: bold;">A new password:</label>
+		<label for="matkhaumoi" style="font-weight: bold;">New password:</label>
 		<div class="col-sm-10">
 			<input type="password" name="matkhaumoi" id="matkhaumoi" class="form-control" placeholder="Enter your new password" maxlength="100" required="required" >
 		</div>
@@ -76,7 +76,7 @@
 	</div>
            
          <div class="container">
-			<button type="submit" class="btn btn-success btn-xs">Agree</button>
+			<button type="submit" class="btn btn-success btn-xs">Save</button>
 		</div>
            
              </frm:form>

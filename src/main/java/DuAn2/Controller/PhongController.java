@@ -117,7 +117,7 @@ public class PhongController {
 
 		if (errors.hasErrors() || file.getSize() == 0) {
 			if (file.getSize() == 0) {
-				model.addAttribute("errorimg", "- Please select an image");
+				model.addAttribute("errorimg", "Please select an image");
 			}
 			model.addAttribute("errors", errors.getAllErrors());
 			model.addAttribute("titlepage", "Room list");
@@ -128,7 +128,7 @@ public class PhongController {
 			if (!file.getOriginalFilename().endsWith(".jpg") && !file.getOriginalFilename().endsWith(".png")
 					&& !file.getOriginalFilename().endsWith(".PNG") && !file.getOriginalFilename().endsWith(".JPG")
 					&& !file.getOriginalFilename().endsWith(".jpeg") && !file.getOriginalFilename().endsWith(".JPEG")) {
-				model.addAttribute("errorimg", "- Only png, jpg, jpeg image formats are allowed.");
+				model.addAttribute("errorimg", "Only png, jpg, jpeg image formats are allowed.");
 				return addqlp(model, phong);
 			} else {
 				long nanotime = System.nanoTime();
@@ -155,10 +155,10 @@ public class PhongController {
 
 				} catch (IllegalStateException | IOException e) {
 					System.out.println(e);
-					model.addAttribute("errorimg", "- Image error");
+					model.addAttribute("errorimg", "Image error");
 				}
 
-				model.addAttribute("message", " More success");
+				model.addAttribute("message", "Create Room Successfully");
 				phong.setTrangThai(0);
 				quanlyphongService.save(phong);
 				model.addAttribute("phong", new Room());
@@ -174,7 +174,7 @@ public class PhongController {
 		activemenu(model);
 		if (errors.hasErrors() || file.getSize() == 0) {
 			if (file.getSize() == 0) {
-				model.addAttribute("errorimg", "- Please select an image");
+				model.addAttribute("errorimg", "Please select an image");
 			}
 			model.addAttribute("errors", errors.getAllErrors());
 			model.addAttribute("titlepage", "Service list");
@@ -184,7 +184,7 @@ public class PhongController {
 			// nếu mở rộng không phải jpg và không phải png thì chạy else
 			if (!file.getOriginalFilename().endsWith(".jpg") && !file.getOriginalFilename().endsWith(".png")
 					&& !file.getOriginalFilename().endsWith(".PNG") && !file.getOriginalFilename().endsWith(".JPG")) {
-				model.addAttribute("errorimg", "- Only png and jpg formats are allowed");
+				model.addAttribute("errorimg", "Png and jpg formats are allowed");
 
 				return HienThiTrangIndex(model, phong);
 			} else {
@@ -207,10 +207,10 @@ public class PhongController {
 
 				} catch (IllegalStateException | IOException e) {
 					System.out.println(e);
-					model.addAttribute("errorimg", "- Image error");
+					model.addAttribute("errorimg", "Image error");
 				}
 
-				model.addAttribute("message", " Successfully fixed");
+				model.addAttribute("message", "Edit Successfully");
 
 				quanlyphongService.save(phong);
 				return HienThiTrangIndex(model, phong);

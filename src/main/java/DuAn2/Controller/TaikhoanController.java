@@ -50,7 +50,7 @@ public class TaikhoanController {
 		List<Account> ltk = (List<Account>) iTaikhoanServices.findAllTk(pageable);// lấy list
 		activemenu(model);
 		vitrihientai = 1;
-		model.addAttribute("titlepage", "List of accounts"); // tiêu đề cho trang
+		model.addAttribute("titlepage", "List of account"); // tiêu đề cho trang
 		model.addAttribute("lTaikhoans", ltk); 
 		model.addAttribute("listSoLuongTrang", listSoLuongTrang(iTaikhoanServices.countFindAllTk(), model));// số lượng các button chọn trang
 		return "qltk"; // Tên trang index
@@ -71,7 +71,7 @@ public class TaikhoanController {
 			iTaikhoanServices.save(taikhoan);// nếu trùng id thì không thêm mà thành sửa.
 			taikhoan = new Account();
 			model.addAttribute("taikhoan", taikhoan);
-			model.addAttribute("message", "Successfully fixed");
+			model.addAttribute("message", "Edit successfully");
 			return listtk(model, taikhoan); // sửa xong chạy lại trang hiển thị book
 		}
 	}
@@ -108,13 +108,13 @@ public class TaikhoanController {
 		} else if (a.equals(taikhoan.getTenDangNhap())) {
 			model.addAttribute("titlepage", "Add a new account");
 
-			model.addAttribute("errortk", "- Username available");
+			model.addAttribute("errortk", "Username is available");
 			return "addtk";
 		}
 
 		else {
 			model.addAttribute("taikhoan", new Account());
-			model.addAttribute("message", " More success");
+			model.addAttribute("message", " Create account successfully!");
 			model.addAttribute("titlepage", "Add a new account");
 			taikhoan.setMatKhau(Common.encode(taikhoan.getMatKhau()));
 			Date today = new Date();
@@ -131,7 +131,7 @@ public class TaikhoanController {
 	public String delete(ModelMap model, @ModelAttribute("taikhoan") Account taikhoan,
 			@RequestParam("tenDangNhap") String tenDangNhap) {
 		activemenu(model);
-		model.addAttribute("titlepage", "List of accounts");
+		model.addAttribute("titlepage", "List of account");
 
 		taikhoan.setTenDangNhap(tenDangNhap); // Set id vào book
 
@@ -176,7 +176,7 @@ public class TaikhoanController {
 
 		model.addAttribute("lTaikhoans", ltim);
 		model.addAttribute("listSoLuongTrang", listSoLuongTrangtim(iTaikhoanServices.countListFindtdnOrName(data), model));
-		model.addAttribute("titlepage", "List of accounts");
+		model.addAttribute("titlepage", "List of account");
 
 		return "qltk"; // Chuyển sang trang timkiem
 	}
@@ -372,7 +372,7 @@ public class TaikhoanController {
 		activemenu(model);
 		PageRequest pageable = PageRequest.of(page - 1, 10);
 		List<Account> l = (List<Account>) iTaikhoanServices.findAllTk(pageable);
-		model.addAttribute("titlepage", "List of accounts");
+		model.addAttribute("titlepage", "List of account");
 		vitrihientai = page;
 
 		model.addAttribute("lTaikhoans", l);
@@ -568,7 +568,7 @@ public class TaikhoanController {
 	public String tkpagetim(ModelMap model, @RequestParam("page") int page,
 			@ModelAttribute("taikhoan") Account taikhoan, HttpServletRequest request) {
 		activemenu(model);
-		model.addAttribute("titlepage", "List of accounts");
+		model.addAttribute("titlepage", "List of account");
 		vitrihientai = page;
 		PageRequest pageable = PageRequest.of(page - 1, 10);
 		String data = request.getParameter("data");

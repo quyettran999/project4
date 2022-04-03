@@ -37,7 +37,7 @@
 					<label for="tendv" style="font-weight: bold;">Service name:</label>
 					<div class="col-sm-10">
 						<frm:input id="tendv" class="form-control" path="tenDichVu"
-							placeholder="Enter a service name" maxlength="50"/>
+							placeholder="Enter service name" maxlength="50"/>
 					</div>
 				</div>
 
@@ -53,16 +53,16 @@
 				</div>
 
 				<div class="form-group">
-					<label style="font-weight: bold;" for="giadv">Service prices:</label>
+					<label style="font-weight: bold;" for="giadv">Service price:</label>
 					<div class="col-sm-10">
 
 						<frm:input type="number" id="giadv" class="form-control"
-							path="giaDichVu" placeholder="Enter the service price" oninput="checkMaxLenghtNumber(this,12)"/>
+							path="giaDichVu" placeholder="Enter service price" oninput="checkMaxLenghtNumber(this,12)"/>
 					</div>
 				</div>
 
 				<div class="container">
-					<frm:button type="submit" class="btn btn-success btn-xs">More</frm:button>
+					<frm:button type="submit" class="btn btn-success btn-xs">Add</frm:button>
 				</div>
 			</frm:form>
 		</div>

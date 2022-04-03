@@ -37,7 +37,7 @@ public class QuanLyThongSoController {
 		thongSoTheoGio = lst.get(0);
 		List<Display> lstGiaoDien = (List<Display>) giaoDienService.findAll();
 		giaoDien = lstGiaoDien.get(0);
-		model.addAttribute("titlepage", "Advanced settings");
+		model.addAttribute("titlepage", "Advanced setting");
 		model.addAttribute("thongSoTheoGio", thongSoTheoGio);
 		model.addAttribute("giaoDien", giaoDien);
 		activemenu(model);
@@ -47,7 +47,7 @@ public class QuanLyThongSoController {
 	@PostMapping("/updatets")
 	public String updatets(ModelMap model, HourlyParameters thongSoTheoGio, Display giaoDien) {
 		thongSoTheoGioService.save(thongSoTheoGio);
-		model.addAttribute("message", "Update successful");
+		model.addAttribute("message", "Edit successful");
 		activemenu(model);
 		return qlts(model, thongSoTheoGio, giaoDien);
 	}
@@ -58,7 +58,7 @@ public class QuanLyThongSoController {
 		HttpSession session = request.getSession();
 		giaoDien.setMaGiaoDien(1);
 		giaoDienService.save(giaoDien);
-		model.addAttribute("message", "Update successful");
+		model.addAttribute("message", "Edit successfully");
 		activemenu(model);
 		session.setAttribute("tenToChuc", giaoDien.getTenToChuc());
 		session.setAttribute("diaChi", giaoDien.getDiaChi());

@@ -35,7 +35,7 @@
 						<table>
 							<tr>
 								<td>Homie Hotel, Inc.<br> Phone: 0905187775<br>
-									Address: 590 CMT8, Ward 11,<br> Quan 3,
+									Address: 590 CMT8, Ward 11,<br> District 3,
 									City. Ho Chi Minh
 								</td>
 
@@ -54,7 +54,7 @@
 				</tr>
 
 				<tr class="details">
-					<td>Price Room</td>
+					<td>Room Price</td>
 
 					<td>${phong.giaPhong}$</td>
 				</tr>

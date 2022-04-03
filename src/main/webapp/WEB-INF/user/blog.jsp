@@ -24,10 +24,12 @@
                                 <div class="blog-info">
                                     <h4><a href="blog-single">How to make best holiday with your family</a></h4>
                                     <p class="date">March 10, 2022</p>
-                                    <p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat
-                                        molestiae
-                                        ullam
-                                        ipsam quas unde earum!</p>
+                                    <p class="blog-text">Top 10 Tips for the Perfect Family Holiday
+										Planning a family holiday can be daunting, whether you’re travelling 
+										with an irritable new-born or an irritable pre-teen, you have to ensure that 
+										you get the right balance between family fun and relaxation. To help anyone planning 
+										a family holiday this summer, we’ve put together some top tips to help you achieve 
+										the perfect trip.</p>
                                     <a href="blog-single" class="btn btn-news mt-4" style="color: orange;">Read More</a>
                                 </div>
                             </div>
@@ -39,10 +41,9 @@
                                 <div class="blog-info">
                                     <h4><a href="blog-single">Natural relaxation - Hotel SPA & Wellness</a></h4>
                                     <p class="date">March 11, 2022</p>
-                                    <p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat
-                                        molestiae
-                                        ullam
-                                        ipsam quas unde earum!</p>
+                                    <p class="blog-text">Welcome to a place where you can escape everyday life 
+                                    and retreat into a sanctuary filled with healing treatments, soothing sounds and caressing aromas. 
+                                    A unique environment providing you a wellness experience like none other.</p>
                                     <a href="blog-single" class="btn btn-news mt-4" style="color: orange;">Read More</a>
                                 </div>
                             </div>
@@ -52,12 +53,11 @@
                                 <a href="blog-single.html" class="d-block zoom"><img src="images/blog3.jpg"
                                         alt="" class="img-fluid news-image" /></a>
                                 <div class="blog-info">
-                                    <h4><a href="blog-single">How to make best holiday with your family</a></h4>
+                                    <h4><a href="blog-single">Have a “Name Our New Drink” contest</a></h4>
                                     <p class="date">March 10, 2022</p>
-                                    <p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat
-                                        molestiae
-                                        ullam
-                                        ipsam quas unde earum!</p>
+                                    <p class="blog-text">Post a picture of the new drink that is being served by your bar staff, 
+                                    then offer your guests an opportunity to name the new drink for a limited period of time.  
+                                    Offer a small prize to the winner of the contest, and name the drink the winning name for a select period of time.</p>
                                     <a href="blog-single" class="btn btn-news mt-4" style="color: orange;">Read More</a>
                                 </div>
                             </div>
@@ -67,12 +67,10 @@
                                 <a href="blog-single" class="d-block zoom"><img src="images/blog4.jpg"
                                         alt="" class="img-fluid news-image" /></a>
                                 <div class="blog-info">
-                                    <h4><a href="blog-single">Natural relaxation - Hotel SPA & Wellness</a></h4>
+                                    <h4><a href="blog-single">8 Unexpected Cinco de Mayo Recipes</a></h4>
                                     <p class="date">March 11, 2022</p>
-                                    <p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat
-                                        molestiae
-                                        ullam
-                                        ipsam quas unde earum!</p>
+                                    <p class="blog-text">We asked Omni chefs to share their favorite Cinco de Mayo recipes. 
+                                    If you’re hosting your own fiesta or just looking to spice up dinner </p>
                                     <a href="blog-single" class="btn btn-news mt-4" style="color: orange;">Read More</a>
                                 </div>
                             </div>

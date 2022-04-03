@@ -10,7 +10,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="text" name="data"
-							placeholder="Enter information to look for" maxlength="50"
+							placeholder="Search by service name" maxlength="50"
 							value="${data }" required /> <span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
@@ -30,8 +30,8 @@
 			<thead>
 				<tr>
 					<th style="width: 50px;"></th>
-					<th>Name service</th>
-					<th>Species</th>
+					<th>Service Name</th>
+					<th>Type</th>
 					<th>Quantity</th>
 					<th>Room set</th>
 					<th>Time</th>
@@ -49,7 +49,7 @@
 					<td>${u.soLuong }</td>
 					<td>${u.datPhong.phong.soPhong }</td>
 					<td><fmt:formatDate value="${u.gioDat }" pattern="HH:mm" /> -
-						<fmt:formatDate value="${u.ngayDat }" pattern="d/M/yyyy" /></td>
+						<fmt:formatDate value="${u.ngayDat }" pattern="dd/MM/yyyy" /></td>
 					<td>${u.thongTinThem }</td>
 					<td>${u.tenDangNhap }</td>
 				</tr>

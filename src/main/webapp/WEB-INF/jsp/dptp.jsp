@@ -120,12 +120,12 @@ width: 100%;
 		</div>
 	</c:if>
 	<div class="container contaiStatus">
-		<span style="opacity: 1;"><span onclick="dptppck()" class="margin-status ${activedptppck }"><b>Room with guests: </b>${phongCoKhach}</span>
-		<span onclick="dptppt()" class="margin-status ${activedptppt }"><b>Empty room: </b>${phongTrong}</span>
-		<span onclick="dptppdt()" class="margin-status ${activedptppdt }"><b>Room reservation: </b>${phongDatTruoc}</span>
+		<span style="opacity: 1;"><span onclick="dptppck()" class="margin-status ${activedptppck }"><b>Room with customers: </b>${phongCoKhach}</span>
+		<span onclick="dptppt()" class="margin-status ${activedptppt }"><b>Vacancy: </b>${phongTrong}</span>
+		<span onclick="dptppdt()" class="margin-status ${activedptppdt }"><b>Reservation rooms: </b>${phongDatTruoc}</span>
 		<span onclick="dptptong()" class="margin-status ${activedptptong }"><b>Total: </b>${tongPhong}</span></span>
 	
-	<button class="btn btn-success btn-xs float-right sizebtn" onclick="dsdattruoc()">See the full list of reservations</button>
+	<button class="btn btn-success btn-xs float-right sizebtn" onclick="dsdattruoc()">List of reservation</button>
 	</div>
 </div>
 <div class="container" style="height: auto; margin-top: 20px;">
@@ -134,7 +134,7 @@ width: 100%;
 			<div style="width: 100%; height: 80px;">
 				<img align="right" style="-webkit-filter: drop-shadow(1px 1px 2px #888888); filter: drop-shadow(1px 1px 2px #888888); margin-bottom: 10px;" src='hinh/title tang.png' width="450px" height="70px">
 				<div class="st-tang">
-					<b>Floors ${i }</b>
+					<b>Floor ${i }</b>
 				</div>
 			</div>
 			<div style="clear: both; width: 100%;">
@@ -154,16 +154,16 @@ width: 100%;
 									src='<c:if test="${u.trangThai==0 }">hinh/homegreen.png</c:if><c:if test="${u.trangThai==1 }">hinh/homered.png</c:if><c:if test="${u.trangThai==2 }">hinh/homecam.png</c:if>'>
 								<div id="thongtin-${u.maPhong}" class="thongtin ${u.trangThai==2?'thongtintt2':'thongtinttk2'}">
 									<div>
-										<b>Room: </b>${u.soPhong }</div>
+										<b>Room Number: </b>${u.soPhong }</div>
 									<div>
-										<b>Type: </b>
+										<b>Room Type: </b>
 										<c:if test="${u.loaiPhong.tenLoaiPhong=='VIP'}">
 											<img src="hinh/vip.png" width="55px" height="23px" style="margin-bottom: 5px; -webkit-filter: drop-shadow(1px 1px 1px #fff0b6); filter: drop-shadow(1px 1px 1px #fff0b6);"></img>
 										</c:if>
 										<c:if test="${u.loaiPhong.tenLoaiPhong!='VIP'}">${u.loaiPhong.tenLoaiPhong}</c:if>
 									</div>
 									<div>
-										<b>Cost: </b>
+										<b>Price: </b>
 										<fmt:formatNumber type="number" pattern="###,###" value="${u.giaPhong}" />
 										$
 									</div>
@@ -172,14 +172,14 @@ width: 100%;
 									</div>
 									<c:if test="${u.trangThai==2}">
 										<div>
-											<b>Amount of people: </b>${u.countHomestay }
+											<b>Number of people: </b>${u.countHomestay }
 										</div>
 									</c:if>
 								</div>
 								<div id="thaotac-${u.maPhong}" class="thaotac">
 									<c:if test="${u.trangThai==0}">
 										<div>
-											<a class="class-thao-tac" href="actionclickdptp?maPhong=${u.maPhong }&trangThai=${u.trangThai }&soPhong=${u.soPhong }">Rent normal</a>
+											<a class="class-thao-tac" href="actionclickdptp?maPhong=${u.maPhong }&trangThai=${u.trangThai }&soPhong=${u.soPhong }">Rented normal</a>
 										</div>
 										<div>
 											<a class="class-thao-tac" href="homestay?maPhong=${u.maPhong }&trangThai=${u.trangThai }&soPhong=${u.soPhong }">HomeStay</a>
@@ -190,7 +190,7 @@ width: 100%;
 									</c:if>
 									<c:if test="${u.trangThai==1}">
 										<div>
-											<a class="class-thao-tac" href="actionclickdptp?maPhong=${u.maPhong }&trangThai=${u.trangThai }&soPhong=${u.soPhong }">Rent normal</a>
+											<a class="class-thao-tac" href="actionclickdptp?maPhong=${u.maPhong }&trangThai=${u.trangThai }&soPhong=${u.soPhong }">Rented normal</a>
 										</div>
 										<div>
 											<a class="class-thao-tac" href="dslichdatphong?maPhong=${u.maPhong }&soPhong=${u.soPhong }">Book</a>

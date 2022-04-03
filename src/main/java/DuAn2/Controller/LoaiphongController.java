@@ -88,7 +88,7 @@ public class LoaiphongController {
 		model.addAttribute("activetlp", "active");
 
 		model.addAttribute("loaiphong", loaiphong);
-		model.addAttribute("titlepage", "Add new room type");
+		model.addAttribute("titlepage", "Add a new room type");
 		return "addlp"; // Tên trang index
 	}
 
@@ -108,12 +108,12 @@ public class LoaiphongController {
 		model.addAttribute("activetlp", "active");
 
 		if (errors.hasErrors()) {
-			model.addAttribute("titlepage", "Add new room type");
+			model.addAttribute("titlepage", "Add a new room type");
 			model.addAttribute("errors", errors.getAllErrors());
 			return "addlp";
 		} else {
-			model.addAttribute("titlepage", "Add new room type");
-			model.addAttribute("message", " New successfully added");
+			model.addAttribute("titlepage", "Add a new room type");
+			model.addAttribute("message", "Create successfully");
 			iLoaiphongServices.save(loaiphong);
 			model.addAttribute("loaiphong", new RoomType());
 			return "addlp";
@@ -125,12 +125,12 @@ public class LoaiphongController {
 			BindingResult errors) {
 		activemenu(model);
 		if (errors.hasErrors()) {
-			model.addAttribute("titlepage", "Add new room type");
+			model.addAttribute("titlepage", "Add a new room type");
 			model.addAttribute("errors", errors.getAllErrors());
 			return listlp(model, loaiphong);
 		} else {
-			model.addAttribute("titlepage", "Add new room type");
-			model.addAttribute("message", " Corrected successfully");
+			model.addAttribute("titlepage", "Add a new room type");
+			model.addAttribute("message", "Edit successfully");
 			iLoaiphongServices.save(loaiphong);// nếu trùng id thì không thêm mà thành sửa.
 			return listlp(model, loaiphong); // sửa xong chạy lại trang hiển thị book
 		}

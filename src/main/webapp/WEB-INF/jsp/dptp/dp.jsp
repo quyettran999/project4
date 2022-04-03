@@ -55,7 +55,7 @@
 							value="${thongtinphong.giaPhongGioSau }" /> $</td>
 				</tr>
 				<tr>
-					<th>Discout</th>
+					<th>Discount</th>
 					<td>${thongtinphong.khuyenMai }%</td>
 				</tr>
 			</tbody>
@@ -69,23 +69,23 @@
 			<div class="form-group">
 				<label for="hoTen" style="font-weight: bold;">Full Name:</label>
 				<frm:input id="hoTen" class="form-control" path="hoTen"
-					placeholder="Import fullName" required="required" maxlength="100" />
+					placeholder="Enter Full Name..." required="required" maxlength="100" />
 			</div>
 			<div class="form-group">
 				<label for="soDT" style="font-weight: bold;">Phone number:</label>
 				<frm:input id="soDT" type="number" class="form-control" path="soDT"
-					placeholder="Import phone number"
+					placeholder="Enter Phone number..."
 					oninput="checkMaxLenghtNumber(this,10)" required="required" />
 			</div>
 			<div class="form-group">
 				<label for="email" style="font-weight: bold;">Email:</label>
 				<frm:input id="email" type="email" class="form-control" path="email"
-					placeholder="Import Email" required="" />
+					placeholder="Enter Email..." required="" />
 			</div>
 			<div class="form-group">
 				<label for="soCMND" style="font-weight: bold;">Identity card number:</label>
 				<frm:input id="soCMND" type="number" class="form-control"
-					path="soCMND" placeholder="Import identity card number"
+					path="soCMND" placeholder="Enter Identity card number..."
 					oninput="checkMaxLenghtNumber(this,20)" required="required" />
 			</div>
 			<div class="form-group">
@@ -98,7 +98,7 @@
 			<div class="form-group">
 				<label for="tienCoc" style="font-weight: bold;">Deposit:</label>
 				<frm:input id="tienCoc" type="number" class="form-control"
-					path="tienCoc" placeholder="Import deposit" required="required"
+					path="tienCoc" placeholder="Enter Deposit..." required="required"
 					oninput="checkMaxLenghtNumber(this,12)" />
 			</div>
 			<div class="form-group">
