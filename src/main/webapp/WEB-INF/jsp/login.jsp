@@ -16,7 +16,14 @@
 
   
 </head>
-
+<style>
+.register{
+	position: absolute;
+}
+.bg-bubbles{
+	position: relative;
+}
+</style>
 <body style="background-color: #292b2c;">
   <div class="wrapper">
 	<div class="container">
@@ -27,9 +34,10 @@
 			<input name="password"type="password" placeholder="Password" required="required" maxlength="100" autocomplete="off">
 			<button type="submit" id="login-button">Login</button>
 		</form>
+		<a class="register" href="register" id="register-button">Register</a>
 	</div>
 	
-	<ul class="bg-bubbles">
+	<ul class="bg-bubbles" class="bg-bubbles">
 		<li></li>
 		<li></li>
 		<li></li>
