@@ -321,6 +321,7 @@
 			   class="btn btn-style transparent-btn mt-sm-5 mt-4 mr-2">Book Now</a>
 			<a href="contact" class="btn btn-style btn-primary mt-sm-5 mt-4">Contact
 				Us</a>
+				
 		</div>
 	</div>
 </div>

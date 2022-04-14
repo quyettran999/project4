@@ -76,6 +76,7 @@
 				</ul>
 				<a href="booking" class="ml-3 book btn btn-secondary btn-style">Book
 					Now</a>
+
 				<c:if test="${nguoidung == null}">
 					<a href="login" class="ml-3 book btn btn-success btn-style">Login</a>
 					<a href="register" class="ml-3 book btn btn-success btn-style">register</a>
@@ -93,6 +94,7 @@
 					  </div>
 					</div>
 				</c:if>
+
 			</div>
 		</div>
 	</nav>
