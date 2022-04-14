@@ -52,5 +52,15 @@
 	<definition name="success" extends="emtyTemplate">
 		<put-attribute name="content" value="/WEB-INF/user/success.jsp"></put-attribute>
 	</definition>
+	<definition name="profile" extends="templateUser">
+		<put-attribute name="content" value="/WEB-INF/user/profile.jsp"></put-attribute>
+	</definition>
+	<definition name="dangnhap" extends="emtyTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/dangnhap.jsp"></put-attribute>
+	</definition>
+	<definition name="register" extends='templateUser'>
+		<put-attribute name="content" value="/WEB-INF/user/register.jsp"></put-attribute></definition>
+	<definition name="change-password" extends="templateUser">
+		<put-attribute name="content" value="/WEB-INF/user/change-password.jsp"></put-attribute></definition>
 
 </tiles-definitions>

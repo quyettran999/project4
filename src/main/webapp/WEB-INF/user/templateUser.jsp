@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@ taglib prefix="mt" uri="http://HomieHotel.com"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
 <head>
@@ -75,8 +76,25 @@
 				</ul>
 				<a href="booking" class="ml-3 book btn btn-secondary btn-style">Book
 					Now</a>
-					<a href="login" class="ml-3 book btn btn-secondary btn-style">Login
-					</a>
+
+				<c:if test="${nguoidung == null}">
+					<a href="login" class="ml-3 book btn btn-success btn-style">Login</a>
+					<a href="register" class="ml-3 book btn btn-success btn-style">register</a>
+				</c:if>
+				<c:if test="${nguoidung !=null}">
+					<div class="dropdown show">
+					  <a class="ml-3 btn btn-success btn-style dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    ${nguoidung }
+					  </a>
+					
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item" href="profile">Profile Details</a>
+					    <a class="dropdown-item" href="change-Password">Change Passwrod</a>
+					    <a class="dropdown-item hoverUser" href="dangxuat">Log-Out</a>
+					  </div>
+					</div>
+				</c:if>
+
 			</div>
 		</div>
 	</nav>

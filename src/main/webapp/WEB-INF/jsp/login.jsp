@@ -34,7 +34,6 @@
 			<input name="password"type="password" placeholder="Password" required="required" maxlength="100" autocomplete="off">
 			<button type="submit" id="login-button">Login</button>
 		</form>
-		<a class="register" href="register" id="register-button">Register</a>
 	</div>
 	
 	<ul class="bg-bubbles" class="bg-bubbles">
