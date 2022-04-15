@@ -47,7 +47,7 @@ public class DvController {
 	public String homestaydv(ModelMap model, @RequestParam("maPhong") Integer maPhong,
 			@RequestParam("soPhong") Integer soPhong) {
 		List<Checkin> danhsach = ilsdtp.listHomestayByMaPhong(maPhong);
-		model.addAttribute("titlepage", "Call for service");
+		model.addAttribute("titlepage", "Service for room");
 		model.addAttribute("danhsach", danhsach);
 		model.addAttribute("maPhong", maPhong);
 		model.addAttribute("soPhong", soPhong);
@@ -95,7 +95,7 @@ public class DvController {
 		sophongtemp = sophong;
 		getlistdsdadat(model);
 		model.addAttribute("width", "100%");
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		return "dv";
 	}
 
@@ -104,7 +104,7 @@ public class DvController {
 		activemenu(model);
 		chuyenhuongtrang = 0;
 		model.addAttribute("madatphong", madatphong);
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		getlistdsdadat(model);
 		return "dv.jsp?view=dichvu/anuong";
 	}
@@ -114,7 +114,7 @@ public class DvController {
 		activemenu(model);
 		chuyenhuongtrang = 1;
 		model.addAttribute("madatphong", madatphong);
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		getlistdsdadat(model);
 		return "dv.jsp?view=dichvu/giatui";
 	}
@@ -123,8 +123,8 @@ public class DvController {
 	public String thugian(ModelMap model, @ModelAttribute("donDichVu") ServiceMenu donDichVu) {
 		activemenu(model);
 		chuyenhuongtrang = 2;
-		model.addAttribute("maDatPhong", madatphong);
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("madatphong", madatphong);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		getlistdsdadat(model);
 		return "dv.jsp?view=dichvu/thugian";
 	}
@@ -134,7 +134,7 @@ public class DvController {
 		activemenu(model);
 		chuyenhuongtrang = 4;
 		model.addAttribute("madatphong", madatphong);
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		getlistdsdadat(model);
 		return "dv.jsp?view=dichvu/dichvukhac";
 	}
@@ -148,7 +148,7 @@ public class DvController {
 		if (donDichVu.getSoLuong() == 0) {
 			model.addAttribute("message", "Invalid quantity");
 			getlistdsdadat(model);
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/anuong";
 		} else {
 			HttpSession session = httpServletRequest.getSession();
@@ -158,7 +158,7 @@ public class DvController {
 			donDichVu.setGioDat(date);
 			idv.save(donDichVu);
 			model.addAttribute("message", "Create successfully");
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			getlistdsdadat(model);
 			model.addAttribute("donDichVu", new ServiceMenu());
 			return "dv.jsp?view=dichvu/anuong";
@@ -174,7 +174,7 @@ public class DvController {
 		if (donDichVu.getSoLuong() == 0) {
 			model.addAttribute("message", "Invalid quantity");
 			getlistdsdadat(model);
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/giatui";
 		} else {
 			HttpSession session = httpServletRequest.getSession();
@@ -184,7 +184,7 @@ public class DvController {
 			donDichVu.setGioDat(date);
 			idv.save(donDichVu);
 			model.addAttribute("message", "Create successfully");
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			getlistdsdadat(model);
 			model.addAttribute("donDichVu", new ServiceMenu());
 			return "dv.jsp?view=dichvu/giatui";
@@ -199,8 +199,8 @@ public class DvController {
 		Date date = new Date();
 		if (donDichVu.getSoLuong() == 0) {
 			model.addAttribute("message", "Invalid quantity");
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
 			getlistdsdadat(model);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/thugian";
 		} else {
 			HttpSession session = httpServletRequest.getSession();
@@ -209,8 +209,8 @@ public class DvController {
 			donDichVu.setNgayDat(date);
 			donDichVu.setGioDat(date);
 			idv.save(donDichVu);
-			model.addAttribute("message", "Create successly");
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("message", "Create successfully");
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			getlistdsdadat(model);
 			model.addAttribute("donDichVu", new ServiceMenu());
 			return "dv.jsp?view=dichvu/thugian";
@@ -254,7 +254,7 @@ public class DvController {
 		idv.save(donDichVu);
 		
 		model.addAttribute("message", "Create successly");
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		getlistdsdadat(model);
 		model.addAttribute("madatphong", maDatPhong);
 		return "dv.jsp?view=dichvu/dichvukhac";
@@ -266,28 +266,28 @@ public class DvController {
 		activemenu(model);
 		if (chuyenhuongtrang == 3) {
 			model.addAttribute("width", "100%");
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		}
 		donDichVu.setMaDonDichVu(id);
 		idv.delete(donDichVu);
 		model.addAttribute("message", "Deleted successfully");
-		model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+		model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 		model.addAttribute("madatphong", madatphong);
 		getlistdsdadat(model);
 		if (chuyenhuongtrang == 0) {
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/anuong";
 		} else if (chuyenhuongtrang == 1) {
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/giatui";
 		} else if (chuyenhuongtrang == 2) {
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/thugian";
 		} else if (chuyenhuongtrang == 4) {
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv.jsp?view=dichvu/dichvukhac";
 		} else {
-			model.addAttribute("titlepage", "Room service reservation " + sophongtemp);
+			model.addAttribute("titlepage", "Ordering Service for Room " + sophongtemp);
 			return "dv";
 		}
 

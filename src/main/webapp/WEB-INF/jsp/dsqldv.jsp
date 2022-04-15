@@ -59,7 +59,7 @@
 			<thead>
 				<tr>
 					<th style="width: 50px;"></th>
-					<th style="min-width: 250px;">Service name</th>
+					<th style="min-width: 250px;">Service Name</th>
 					<th style="min-width: 200px;">Type</th>
 					<th style="min-width: 200px;">Price</th>
 					<th style="min-width: 130px;">Action</th>

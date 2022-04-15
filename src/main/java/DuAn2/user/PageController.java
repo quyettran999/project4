@@ -2,6 +2,8 @@ package DuAn2.user;
 
 import DuAn2.Dto.BookingDTO;
 import DuAn2.Model.Room;
+import DuAn2.Model.RoomType;
+import DuAn2.Services.ILoaiphongSercives;
 import DuAn2.Services.QuanLyPhongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -21,7 +23,7 @@ public class PageController {
 
 	@Autowired
 	private QuanLyPhongService quanLyPhongService;
-
+	
 	@RequestMapping(value = "about", method = RequestMethod.GET)
 	public String flowers() {
 		return "about";
@@ -45,7 +47,7 @@ public class PageController {
 	@RequestMapping(value = "room", method = RequestMethod.GET)
 	public String room(@Param("roomType") String roomType, Model model) {
 		List<Room> phongs;
-		if (roomType == null || roomType.equalsIgnoreCase("Homestay"))
+		if (roomType == null || roomType.equals("Homestay"))
 			phongs = quanLyPhongService.findAll();
 		else
 			phongs = quanLyPhongService.findAllByLoaiPhongTenLoaiPhong(roomType);

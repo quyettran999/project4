@@ -11,7 +11,7 @@
 						<div class="banner-info">
 							<div class="container">
 								<div class="banner-info-bg">
-									<h5>Location is heavenly. Best place to visit in weekend and
+									<h5>Location is heavenly. Best place to visit in the weekend and
 										enjoy the peaceful beauty</h5>
 									<a class="btn btn-style transparent-btn mt-sm-5 mt-4"
 									   href="service"> Our Services</a>
@@ -86,12 +86,12 @@
 							<div class="row book-form">
 								<div class="form-input col-md-4 col-sm-6 mt-3">
 									<label>Check-in Date</label>
-									<input type="date" name="checkInDate" placeholder="Date"
+									<input type="date" name="checkInDate" placeholder="Check-in date"
 										   required/>
 								</div>
 								<div class="form-input col-md-4 col-sm-6 mt-3">
 									<label>Check-out Date</label>
-									<input type="date" name="checkOutDate" placeholder="Date"
+									<input type="date" name="checkOutDate" placeholder="Check-out date"
 										   required/>
 								</div>
 								<div class="form-input col-md-4 col-sm-6 mt-3">
@@ -141,7 +141,7 @@
 					and harmony. We invite you to explore the exciting array of fine
 					amenities and facilities which are designed to enhance your
 					experience. Hope you enjoy when you are in our hotel.</p>
-				<a href="about.html" class="btn btn-style btn-primary mt-sm-5 mt-4">
+				<a href="about" class="btn btn-style btn-primary mt-sm-5 mt-4">
 					About Us</a>
 			</div>
 			<div class="col-lg-6 about-right position-relative mt-lg-0 mt-5">
@@ -185,7 +185,7 @@
 						</ul>
 						<p>Room is equipped with modern and luxurious wooden furniture luxury. 
 						Bathroom with luxury bath: a bathtub and separate shower.</p>
-						<a href="booking" class="btn btn-style btn-primary mt-sm-4 mt-3">Book
+						<a href="booking.jsp" class="btn btn-style btn-primary mt-sm-4 mt-3">Book
 							Now</a>
 					</div>
 				</div>

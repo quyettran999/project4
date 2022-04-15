@@ -24,58 +24,56 @@
 								<div class="hny-frm_grid">
 									<h5>Name</h5>
 									<form:input path="name" name="name" type="text"
-										placeholder="Your Name" required=""></form:input>
+										placeholder="Your Name" required="required"></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Phone Number</h5>
 									<form:input path="phoneNumber" name="phoneNumber" type="text"
-										placeholder="Phone Number" required=""></form:input>
+										placeholder="Phone Number" required="required"></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Email</h5>
 									<form:input path="email" name="email" type="email"
-										placeholder="Email" required=""></form:input>
+										placeholder="Email" required="required"></form:input>
+								</div>
+								<div class="hny-frm_grid">
+									<h5>Check-in Date</h5>
+									<form:input id="checkInDate" path="checkInDate"
+										name="checkInDate" type="date" placeholder="Check-in Date"
+										required="required"></form:input>
+								</div>
+								<div class="hny-frm_grid">
+									<h5>Check-out Date</h5>
+									<form:input id="checkOutDate" path="checkOutDate"
+										name="checkOutDate" type="date" placeholder="Check-out Date"
+										required="required"></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Type Room</h5>
-									<form:select path="roomType" name="roomType" required="">
+									<form:select path="roomType" name="roomType">
 										<form:option value="VIP">VIP</form:option>
 										<form:option value="Normal">Normal</form:option>
 										<form:option value="Homestay">Homestay</form:option>
 									</form:select>
 								</div>
 								<div class="hny-frm_grid">
-									<h5>Check-in Date</h5>
-									<form:input id="checkInDate" path="checkInDate"
-										name="checkInDate" type="date" placeholder="Check-in Date"
-										required=""></form:input>
-								</div>
-								<div class="hny-frm_grid">
-									<h5>Check-out Date</h5>
-									<form:input id="checkOutDate" path="checkOutDate"
-										name="checkOutDate" type="date" placeholder="Check-out Date"
-										required=""></form:input>
-									<form:input path="roomCode" name="roomCode" type="hidden"
-										placeholder="Room ID"></form:input>
-								</div>
-								<c:if test="${show}">
-									<div class="hny-frm_grid">
-										<h5>Room number</h5>
-										<input value="${roomNumber}" name="roomNumber" type="number"
-											readonly="true" placeholder="Room Number" required="" />
-									</div>
-								</c:if>
+									<h5>Room Number</h5>
+									<form:input path="roomCode" name="roomCode" type="number"
+									 required="required"></form:input>
+								</div>	
+								
 								<div class="hny-frm_grid">
 
 								</div>
-
-							</div>
+</div>
 							<input type="submit"
 								class="btn btn-style btn-secondary book mt-3"
-								style="background: #f57b51; color: #fff" value="Book Now" />
+								style="background: #f57b51; color: #fff" value="Book" />
+								
 							<p class="already">You are booking as a guest.</p>
 							<p class="already" style="color: red">${error}</p>
 							<p class="already" style="color: #34ce57">${errors}</p>
+							
 						</form:form>
 					</div>
 				</div>

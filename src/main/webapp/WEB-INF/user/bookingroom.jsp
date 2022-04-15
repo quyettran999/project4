@@ -23,46 +23,46 @@
 								<div class="hny-frm_grid">
 									<h5>Name</h5>
 									<form:input path="name" name="name" type="text"
-										placeholder="Your Name" required=""></form:input>
+										placeholder="Your Name"></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Phone Number</h5>
 									<form:input path="phoneNumber" name="phoneNumber" type="text"
-										placeholder="Phone Number" required=""></form:input>
+										placeholder="Phone Number"></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Email</h5>
 									<form:input path="email" name="email" type="email"
-										placeholder="Email" required=""></form:input>
+										placeholder="Email"></form:input>
 								</div>
 								<c:if test="${show}">
 									<div class="hny-frm_grid">
 										<h5>Room number</h5>
 										<input value="${roomNumber}" name="roomNumber" type="number"
-											   readonly="true" placeholder="Room Number" required="" />
+											   readonly="true" placeholder="Room Number" />
 									</div>
 									<div class="hny-frm_grid">
 										<h5>Room Price</h5>
-										<input value="${roomPrice}$" name="roomPrice" type="text"
-											   readonly="true"  required="" />
+										<input value="${roomPrice} $" name="roomPrice" type="text"
+											   readonly="true" />
 									</div>
 									<div class="hny-frm_grid">
 										<h5>Room Type</h5>
 										<input value="${bookingDTO.roomType}" name="roomType" type="text"
-											   readonly="true"  required="" />
+											   readonly="true"/>
 									</div>
 								</c:if>
 								<div class="hny-frm_grid">
 									<h5>Check-in Date</h5>
 									<form:input id="checkInDate" path="checkInDate"
 										name="checkInDate" type="date" placeholder="Check-in Date"
-										required=""></form:input>
+										></form:input>
 								</div>
 								<div class="hny-frm_grid">
 									<h5>Check-out Date</h5>
 									<form:input id="checkOutDate" path="checkOutDate"
 										name="checkOutDate" type="date" placeholder="Check-out Date"
-										required=""></form:input>
+										></form:input>
 									<form:input path="roomCode" name="roomCode" type="hidden"
 										placeholder="Room ID"></form:input>
 								</div>
@@ -77,6 +77,7 @@
 								style="background: #f57b51; color: #fff" value="Book Now" />
 							<p class="already">You are booking as a guest.</p>
 							<p class="already" style="color: red">${error}</p>
+							<p class="already" style="color: #34ce57">${errors}</p>
 						</form:form>
 					</div>
 				</div>
