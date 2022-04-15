@@ -35,7 +35,7 @@
 		<div class="overflowdv">
 			<table>
 				<tr>
-					<td class="nhapdv" align="top"><jsp:include
+					<td class="nhapdv" valign="top"><jsp:include
 							page="${param.view }"></jsp:include></td>
 					<td class="bangdv" align="center"></c:if>
 						<div class="overflowdv1"
@@ -49,14 +49,14 @@
 									</tr>
 									<tr>
 										<th></th>
-										<th style="min-width: 150px">Service Name</th>
-										<th style="min-width: 150px">Service Type</th>
+										<th style="min-width: 150px">Name DV</th>
+										<th style="min-width: 150px">Species DV</th>
 										<th style="min-width: 150px">Quantity</th>
-										<th style="min-width: 150px">Unit Price</th>
-										<th style="min-width: 150px">Amount</th>
+										<th style="min-width: 150px">Unit price</th>
+										<th style="min-width: 150px">Into money</th>
 										<th style="min-width: 150px">More information</th>
-										<th style="min-width: 150px">Orderer</th>
-										<th style="min-width: 150px">Action</th>
+										<th style="min-width: 150px">Staff</th>
+										<th style="min-width: 150px">Act</th>
 									</tr>
 								</thead>
 								<tbody>

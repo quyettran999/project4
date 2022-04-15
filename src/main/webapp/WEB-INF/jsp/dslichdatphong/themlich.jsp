@@ -27,19 +27,19 @@
 				<div class="form-group">
 					<label for=tenNguoiDat style="font-weight: bold;">Customer's full name:</label>
 					<frm:input id="tenNguoiDat" class="form-control" path="tenNguoiDat"
-						placeholder="Enter Full Name" maxlength="50" required="required" />
+						placeholder="Import FullName" maxlength="50" required="required" />
 				</div>
 				<div class="form-group">
 					<label for="soDienThoai" style="font-weight: bold;">Phone number:</label>
 					<frm:input id="soDienThoai" type="number" class="form-control"
-						path="soDienThoai" placeholder="Enter Phone Number"
+						path="soDienThoai" placeholder="Import phone number"
 						oninput="checkMaxLenghtNumber(this,20)" required="required" />
 				</div>
 				<div class="form-group">
 					<label for="imail" style="font-weight: bold;">Email:</label>
 					<frm:input id="imail" type="email" class="form-control"
-							   path="imail" placeholder="Enter Email"
-							    required="required"/>
+							   path="imail" placeholder="Import Email"
+							    required=""/>
 				</div>
 				<div class="form-group">
 					<label for="gioDat" style="font-weight: bold;">Time set:</label>

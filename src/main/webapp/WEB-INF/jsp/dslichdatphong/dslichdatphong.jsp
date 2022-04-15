@@ -26,10 +26,10 @@
 					<th style="min-width: 100px;">Full Name</th>
 					<th style="min-width: 130px;">Phone Number</th>
 					<th style="min-width: 130px;">Email</th>
-					<th style="min-width: 150px;">Check-in Date</th>
-					<th style="min-width: 150px;">Check-out Date</th>
+					<th style="min-width: 150px;">Time Set</th>
+					<th style="min-width: 150px;">Time Out</th>
 					<th style="min-width: 150px;">More Information</th>
-					<th style="min-width: 120px;">Orderer</th>
+					<th style="min-width: 120px;">Staff</th>
 					<th style="min-width: 100px;">Manipulation</th>
 				</tr>
 			</thead>
@@ -61,7 +61,7 @@
 </div>
 <script>
 function xoaLich(maPhong, soPhong, maLich) {
-	if (confirm("Do you want to delete this reservation?"))
+	if (confirm("Bạn muốn xóa?")) 
     {
 	window.location="/actionxoalich?maLich=" + maLich + "&maPhong=" + maPhong + "&soPhong=" + soPhong;
     }

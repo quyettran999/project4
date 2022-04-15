@@ -22,12 +22,11 @@
 					<th style="min-width: 100px;">Full name</th>
 					<th style="min-width: 130px;">Phone number</th>
 					<th style="min-width: 130px;">Email</th>
-					<th style="min-width: 150px;">Check-in Date</th>
-					<th style="min-width: 150px;">Check-out Date</th>
-					<th style="min-width: 100px;">Room Type</th>
-					<th style="min-width: 100px;">Room Number</th>
+					<th style="min-width: 150px;">Time set</th>
+					<th style="min-width: 150px;">Time out</th>
+					<th style="min-width: 100px;">Room number</th>
 					<th style="min-width: 150px;">More information</th>
-					<th style="min-width: 120px;">Orderer</th>
+					<th style="min-width: 120px;">Staff</th>
 					<th style="min-width: 100px;">Manipulation</th>
 				</tr>
 			</thead>
@@ -43,7 +42,6 @@
 								pattern="yyyy-MM-dd" value="${u.ngayDat }" /></td>
 						<td style="white-space: nowrap;"><fmt:formatDate
 								pattern="yyyy-MM-dd" value="${u.ngayTra }" /></td>
-								<td style="white-space: nowrap;">${u.phong.loaiPhong.tenLoaiPhong}</td>
 						<td style="white-space: nowrap;">${u.phong.soPhong}</td>
 						<td style="white-space: nowrap;">${u.thongTinThem}</td>
 						<td style="white-space: nowrap;">${u.tenDangNhap}</td>

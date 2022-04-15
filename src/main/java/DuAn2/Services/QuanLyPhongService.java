@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import DuAn2.Model.Room;
-import DuAn2.Model.RoomType;
 
 
 
