@@ -47,7 +47,7 @@ public class QuanLyThongSoController {
 	@PostMapping("/updatets")
 	public String updatets(ModelMap model, HourlyParameters thongSoTheoGio, Display giaoDien) {
 		thongSoTheoGioService.save(thongSoTheoGio);
-		model.addAttribute("message", "Edit successfully");
+		model.addAttribute("message", "Edit successful");
 		activemenu(model);
 		return qlts(model, thongSoTheoGio, giaoDien);
 	}

@@ -41,11 +41,11 @@
 					</figure>
 					<div class="room-info">
 						<h3 class="room-title">
-							<a href="/room?roomType=Normal">Normal Room</a>
+							<a href="#url">Normal Room</a>
 						</h3>
 						<ul class="mb-3">
 							<li><span class="fa fa-users"></span> 2 Guests</li>
-							<li><span class="fa fa-bed"></span> 2 Beds</li>
+							<li><span class="fa fa-bed"></span> 2sqft</li>
 						</ul>
 						<p>Fully furnished, luxurious furniture, service, room of
 							3-star standard or above, attentive service staffs, especially,
@@ -89,7 +89,7 @@
 					</figure>
 					<div class="room-info">
 						<h3 class="room-title">
-							<a href="/room?roomType=VIP">VIP Room</a>
+							<a href="#url">VIP Room</a>
 						</h3>
 						<ul class="mb-3">
 							<li><span class="fa fa-users"></span> 2-4 Customers</li>
@@ -136,7 +136,7 @@
 					</figure>
 					<div class="room-info">
 						<h3 class="room-title">
-							<a href="/room?roomType=Homestay">Homestay Room</a>
+							<a href="#url">Homestay Room</a>
 						</h3>
 						<ul class="mb-3">
 							<li><span class="fa fa-users"></span> 2-8 Customers</li>
