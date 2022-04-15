@@ -1,6 +1,8 @@
 Manifest-Version: 1.0
+
 Built-By: PC
 Build-Jdk: 17.0.1
+
 Implementation-Title: HomieHotel
 Implementation-Version: v1.0
 Implementation-Vendor-Id: HomieHotel
