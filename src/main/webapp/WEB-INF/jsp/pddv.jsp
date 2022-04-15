@@ -82,7 +82,7 @@ s
 												<img src="hinh/vip.png" width="55px" height="23px"
 													style="margin-bottom: 5px; -webkit-filter: drop-shadow(1px 1px 1px #fff0b6); filter: drop-shadow(1px 1px 1px #fff0b6);"></img>
 											</c:if>
-											<c:if test="${u.phong.loaiPhong.tenLoaiPhong=='Thường'}">Normal</c:if>
+											<c:if test="${u.phong.loaiPhong.tenLoaiPhong=='Normal'}">Normal</c:if>
 										</div>
 										<div>
 											<b>Discount: </b>${u.phong.khuyenMai } %
@@ -90,7 +90,8 @@ s
 										<div>
 											<b>Status: </b>
 											<c:if test="${u.phong.trangThai==0 }">Vacancy</c:if>
-											<c:if test="${u.phong.trangThai==1}">Rented</c:if>
+											<c:if test="${u.phong.trangThai==1}">Rental</c:if>
+											<c:if test="${u.phong.trangThai==2}">Booking</c:if>
 										</div>
 									</div>
 								</a>

@@ -20,8 +20,8 @@
 				<tr>
 					<th style="min-width: 100px;">Full Name</th>
 					<th style="min-width: 130px;">Phone number</th>
-					<th style="min-width: 100px;">Identity card number</th>
-					<th style="min-width: 120px;">Deposit</th>
+					<th style="min-width: 100px;">Identity Card</th>
+					<th style="min-width: 120px;">Price</th>
 					<th style="min-width: 150px;">Time set</th>
 					<th style="min-width: 120px;">Orderer</th>
 					<th style="min-width: 100px;">Manipulation</th>

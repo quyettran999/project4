@@ -4,6 +4,9 @@ package DuAn2.Model;
 import java.sql.Date;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,17 +15,29 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class CheckinCalendar {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int maLich;
+	@NotNull(message = "Name cannot be blank")
 	private String tenNguoiDat;
+	@NotNull(message = "Phone Number cannot be blank")
 	private String soDienThoai;
+	@NotNull(message = "Email cannot be blank")
+	@Email
 	private String imail;
+	@NotNull(message = "Check-in Date cannot be blank")
 	private Date ngayDat;
+	
 	@DateTimeFormat(pattern="HH:mm")
 	private java.util.Date gioDat;
+	@NotNull(message = "Check-out Date cannot be blank")
 	private Date ngayTra;
 	private String thongTinThem;
 	private String tenDangNhap;
-
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "maLoaiPhong")
+	private RoomType loaiPhong;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "maPhong")
 	private Room room;
@@ -38,7 +53,18 @@ public class CheckinCalendar {
 		this.room = phong;
 
 	}
+	
+	public CheckinCalendar(int maLich, String tenNguoiDat, String soDienThoai, String imail, Date ngayDat, Date ngayTra,RoomType loaiPhong, Room phong) {
+		this.maLich = maLich;
+		this.tenNguoiDat = tenNguoiDat;
+		this.soDienThoai = soDienThoai;
+		this.imail = imail;
+		this.ngayDat = ngayDat;
+		this.ngayTra = ngayTra;
+		this.loaiPhong = loaiPhong;
+		this.room = phong;
 
+	}
 	public CheckinCalendar() {
 	}
 
@@ -114,6 +140,13 @@ public class CheckinCalendar {
 		this.tenDangNhap = tenDangNhap;
 	}
 
+	public RoomType getLoaiPhong() {
+		return loaiPhong;
+	}
+	
+	public void setLoaiPhong(RoomType roomType) {
+		this.loaiPhong = roomType;
+	}
 	public Room getPhong() {
 		return room;
 	}

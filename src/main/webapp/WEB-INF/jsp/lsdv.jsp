@@ -10,7 +10,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input class="form-control" type="text" name="data"
-							placeholder="Search by service name" maxlength="50"
+							placeholder="Enter service name" maxlength="50"
 							value="${data }" required /> <span class="input-group-btn">
 							<button class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span><span
@@ -33,10 +33,10 @@
 					<th>Service Name</th>
 					<th>Type</th>
 					<th>Quantity</th>
-					<th>Room set</th>
+					<th>Room Number</th>
 					<th>Time</th>
 					<th>More information</th>
-					<th>Staff</th>
+					<th>Orderer</th>
 				</tr>
 			</thead>
 			<c:forEach var="u" items="${l }">

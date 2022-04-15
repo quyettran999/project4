@@ -1,12 +1,25 @@
 package DuAn2.Dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
+import DuAn2.Model.RoomType;
+
 public class BookingDTO {
 
+	@NotNull(message = "Name cannot be blank")
     private String name;
+	@NotNull(message = "Phone Number cannot be blank")
+	
     private String phoneNumber;
+	@NotNull(message = "Email cannot be blank")
+	@Email(message="Must be Email format")
     private String email;
+	@NotNull(message = "Check-in Date cannot be blank")
     private String checkInDate;
+	@NotNull(message = "Check-out Date cannot be blank")
     private String checkOutDate;
+	@NotNull(message = "Room Type cannot be blank")
     private String roomType;
     private int roomCode;
 

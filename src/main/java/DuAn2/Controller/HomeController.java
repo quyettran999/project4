@@ -5,9 +5,11 @@ import DuAn2.Event.OnBookingSuccessEvent;
 import DuAn2.Model.Checkin;
 import DuAn2.Model.CheckinCalendar;
 import DuAn2.Model.Room;
+import DuAn2.Model.RoomType;
 import DuAn2.Paypal.PayPalResult;
 import DuAn2.Paypal.PayPalSucess;
 import DuAn2.Model.Checkout;
+import DuAn2.Services.ILoaiphongSercives;
 import DuAn2.Services.ITraPhong;
 import DuAn2.Services.IttkhService;
 import DuAn2.Services.LichDatPhongService;
@@ -24,6 +26,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
 
@@ -46,6 +49,9 @@ public class HomeController {
     @Autowired
     private QuanLyPhongService quanLyPhongService;
 
+    @Autowired
+    private ILoaiphongSercives quanLyLoaiPhongService;
+    
     @Autowired
     private LichDatPhongService lichDatPhongService;
 
@@ -116,20 +122,26 @@ public class HomeController {
     
     //Booking
     @RequestMapping(value = "/booking", method = RequestMethod.POST)
-    public String bookingRoom(@Valid @ModelAttribute("bookingDTO") BookingDTO bookingDTO, Model model, WebRequest request) throws ParseException {
-        Room phong = quanLyPhongService.getByMaPhong(bookingDTO.getRoomCode());
-        if (phong == null) {
+    public String bookingRoom(@Valid @ModelAttribute("bookingDTO") BookingDTO bookingDTO, Model model,BindingResult bindingResult, WebRequest request) throws ParseException {
+        
+    	Room phong = quanLyPhongService.getByMaPhong(bookingDTO.getRoomCode());
+        RoomType loaiPhong = quanLyLoaiPhongService.getByTenLoaiPhong(bookingDTO.getRoomType());
+        if (phong != null) {
             if (!quanLyPhongService.findAllByLoaiPhongTenLoaiPhong(bookingDTO.getRoomType()).isEmpty()) {
                 List<Room> phongs = quanLyPhongService.findAllByLoaiPhongTenLoaiPhong(bookingDTO.getRoomType());
                 for (Room p : phongs) {
                     if (lichDatPhongService.findAllByRoomMaPhongOrderByNgayDatDesc(p.getMaPhong()).isEmpty()) {
-                        phong = p;
-                        break;
-                    } else {
-
+                        model.addAttribute("error", "No room left");
+                        return "booking";
+                    } 
+                    else {
                         if (checkDate(p, bookingDTO.getCheckInDate(), bookingDTO.getCheckOutDate())) {
                             phong = p;
                             break;
+                        }
+                        else {
+                            model.addAttribute("error", "Room has been reserved");
+                            return "booking";
                         }
                     }
                 }
@@ -137,52 +149,42 @@ public class HomeController {
                 model.addAttribute("error", "Out of room");
                 return "booking";
             }
-        } else {
-            if (!lichDatPhongService.findAllByRoomMaPhongOrderByNgayDatDesc(phong.getMaPhong()).isEmpty()) {
-
-                if (!checkDate(phong, bookingDTO.getCheckInDate(), bookingDTO.getCheckOutDate())) {
-                    model.addAttribute("error", "Room has been reserved");
-                    return "booking";
-                }
-
-            }
+        
         }
+        try {
+        if(!bindingResult.hasErrors()) {
 
-        if (phong == null) {
-            model.addAttribute("error", "Out of room");
-            return "booking";
-        }
-
-        if (bookingDTO.getCheckInDate().compareToIgnoreCase(new SimpleDateFormat("yyyy-MM-dd").format(new Date())) < 0) {
+        if ((bookingDTO.getCheckInDate().compareToIgnoreCase(new SimpleDateFormat("yyyy-MM-dd").format(new Date())) < 0)||
+        		(bookingDTO.getCheckOutDate().compareToIgnoreCase(new SimpleDateFormat("yyyy-MM-dd").format(new Date())) < 0)) {
             System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
             System.out.println(bookingDTO.getCheckInDate());
-            model.addAttribute("error", "Check-in date must greater than or equal today");
+            System.out.println(bookingDTO.getCheckOutDate());
+            model.addAttribute("error", "Check-in/ Check-out date must greater than or equal today");
             return "booking";
         }
 
-
-        if (bookingDTO.getCheckInDate().compareTo(bookingDTO.getCheckOutDate()) > -1) {
-            model.addAttribute("error", "Check-in date can't greater than check-out date");
+        if ((bookingDTO.getCheckInDate().compareTo(bookingDTO.getCheckOutDate()) > -1) ||
+        		(bookingDTO.getCheckOutDate().compareTo(bookingDTO.getCheckInDate()) < 0)){
+            model.addAttribute("error", "Check-in date can't be greater than check-out date");
             return "booking";
         }
+        }
+        
+        
 
         java.sql.Date sqlDate = java.sql.Date.valueOf(String.valueOf(bookingDTO.getCheckInDate()));
         java.sql.Date sqlDate1 = java.sql.Date.valueOf(String.valueOf(bookingDTO.getCheckOutDate()));
         CheckinCalendar checkinCalendar = new CheckinCalendar((int) (lichDatPhongService.countfindAll() + 1),
-
-                bookingDTO.getName(),
+        		bookingDTO.getName(),
                 bookingDTO.getPhoneNumber(),
                 bookingDTO.getEmail(),
-
-                phong,
-
                 sqlDate,
-                sqlDate1
-        );
+                sqlDate1,
+                loaiPhong,
+                phong);
 
         lichDatPhongService.save(checkinCalendar);
 
-        try {
             String appUrl = request.getContextPath();
             eventPublisher.publishEvent(new OnBookingSuccessEvent(bookingDTO, appUrl, phong));
         } catch (Exception re) {
@@ -190,6 +192,8 @@ public class HomeController {
         }
         model.addAttribute("errors", "Successfully reservation");
         return "booking";
+        
+        
     }
 
     private boolean checkDate(Room phong, String checkInDate, String checkOutDate) {
@@ -257,7 +261,7 @@ public class HomeController {
         Room phong = quanLyPhongService.getByMaPhong(bookingDTO.getRoomCode());
         modelMap.put("paypalConfig", paypalServices.getPayPalConfig());
         if (phong == null) {
-            if (!quanLyPhongService.findAllByLoaiPhongTenLoaiPhong(bookingDTO.getRoomType()).isEmpty()) {
+            if (quanLyPhongService.findAllByLoaiPhongTenLoaiPhong(bookingDTO.getRoomType()) != null) {
                 List<Room> phongs = quanLyPhongService.findAllByLoaiPhongTenLoaiPhong(bookingDTO.getRoomType());
                 for (Room p : phongs) {
                     if (ittkhService.findAllByRoomMaPhongOrderByNgayDatDesc(p.getMaPhong()).isEmpty()) {

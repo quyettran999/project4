@@ -80,7 +80,7 @@
 			<div class="form-group">
 				<label for="email" style="font-weight: bold;">Email:</label>
 				<frm:input id="email" type="email" class="form-control" path="email"
-					placeholder="Enter Email..." required="" />
+					placeholder="Enter Email..." required="required" />
 			</div>
 			<div class="form-group">
 				<label for="soCMND" style="font-weight: bold;">Identity card number:</label>

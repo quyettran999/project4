@@ -184,6 +184,32 @@ public class DptpController {
 		setTrangThai(model);
 		return "dptp";
 	}
+	
+	@RequestMapping("/dptptong")
+	public String dptptong(ModelMap model) {
+		activemenu(model);
+
+		List<Room> l = (List<Room>) ittp.findAll();
+		model.addAttribute("l", l);
+
+		List<Integer> ltang = new ArrayList<>();
+		// kiem tra da ton tai chua
+		for (int i = 0; i < l.size(); i++) {
+			if (!ltang.contains(l.get(i).getTang())) {
+				ltang.add(l.get(i).getTang());
+			}
+		}
+
+		if (l.isEmpty()) {
+
+			model.addAttribute("message", "There is no room");
+		}
+		model.addAttribute("ltang", ltang);
+		model.addAttribute("titlepage", "Check-in / Check-out");
+		model.addAttribute("activedptptong", "active-status");
+		setTrangThai(model);
+		return "dptp";
+	}
 
 	public void setTrangThai(ModelMap model) {
 		List<Integer> lDatPhong = lichDatPhongService.listLichDatPhongCount();
