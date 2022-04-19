@@ -158,15 +158,13 @@ public class UserController {
 		if (errors.hasErrors() ) {
 			model.addAttribute("errors", errors.getAllErrors());
 			return "profile";
-		} else  {
+		} else   {
 			getUser.setNgayTao(user.getNgayTao());
 			getUser.setGioTao(user.getGioTao());
 			getUser.setMatKhau(user.getMatKhau());
 			iTaikhoanServices.save(getUser);
-			//model.addAttribute("message", "Update profile successfully");
 			redirectAttrs.addAttribute("message", "Update profile successfully");
 			return "redirect:/profile";
-//			return "profile";
 		}
 	}
 	
