@@ -109,6 +109,18 @@
 
 					</ul></li>
 				<li class="nav-item"><a
+					class="nav-link nav-link-collapse collapsed${chamshowpost}"
+					data-toggle="collapse" href="#collapsePost"
+					style="text-shadow: 0px 0px 1px #888888;"><i
+						class="fa fa-list"></i> Blog Management</a>
+					<ul class="sidebar-second-level collapse${chamshowpost}"
+						id="collapsePost">
+						<li class="nav-item ${activepost }"><a href="post_management">Post
+								information</a></li>
+						<li class="nav-item ${activenpost }"><a href="newPost">New Post</a></li>
+
+					</ul></li>
+				<li class="nav-item"><a
 					class="nav-link nav-link-collapse collapsed${chamshowtkvbc }"
 					data-toggle="collapse" href="#collapseMulti1"
 					style="text-shadow: 0px 0px 1px #888888;"><i

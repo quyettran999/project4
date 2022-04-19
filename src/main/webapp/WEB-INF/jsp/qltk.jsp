@@ -87,10 +87,11 @@
 							onclick="changeNgaySinhEdit('${u.tenDangNhap}')">
 							<i class="fa fa-edit"></i> Edit
 						</button>
-						<button type="button" class="btn btn-danger btn-sm"
+						<c:if test="${u.tenDangNhap != 'admin'}"><button type="button" class="btn btn-danger btn-sm"
 							data-toggle="modal" data-target="#myModalxoa${u.tenDangNhap}">
 							<i class="fa fa-trash-o"></i> Delete
-						</button></td>
+						</button>
+						</c:if></td>
 				</tr>
 				<!-- Modal xoa -->
 				<div class="modal fade" id="myModalxoa${u.tenDangNhap}"

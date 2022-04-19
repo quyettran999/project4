@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="frm" uri="http://www.springframework.org/tags/form"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="frm" uri="http://www.springframework.org/tags/form"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+<%@ page import="java.util.Date"%>
 
 
 <section class="w3l-booking-top">
@@ -12,8 +12,7 @@
 		<div class="container">
 			<div class="booking-top-gds">
 				<div class="booking-forms-16-info align-self">
-					<h5>Your Information</h5>
-					<h3 class="title-big">${getUser.tenDangNhap}.</h3>
+					<h3 class="title-big">Your Information</h3>
 				</div>
 				<div class="form-right-inf">
 					<div class="booking-form-content">
@@ -85,14 +84,11 @@
 							<div class="hny-frm_grid">
 								<label for="Email" style="font-weight: bold;">Email:</label>
 									<frm:input type="Email" id="Email" class="form-control"
-										path="Email" value="${getUser.email}" oninput="checkMaxLenghtNumber(this,100)"/>
+										path="Email" value="${getUser.email}" disabled="true"/>
 							</div>
-							
-							<div class="hny-frm_grid">
-								<label for="matKhau" style="font-weight: bold;">Password:</label>
-									<frm:input type="password" id="matKhau" class="form-control"
-										path="matKhau" autocomplete="off"  placeholder="Enter your password" maxlength="100"/>
-							</div>
+							<frm:hidden path="tenDangNhap" value="${getuser.email }"/>
+							<frm:hidden id="password"
+										path="matKhau" value="${getUser.matKhau}"/>
 							
 							<frm:hidden id="chucVu"
 										path="chucVu.maChucVu" value="${getUser.chucVu.maChucVu}"/>

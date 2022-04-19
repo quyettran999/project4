@@ -3,7 +3,9 @@ package DuAn2.Services;
 import java.sql.Date;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
@@ -38,5 +40,9 @@ public interface Ilsdtp extends CrudRepository<Checkin, Integer>{
 	
 	@Query(value = "select dp.* from checkin dp where dp.ma_phong = ?1 and dp.loai_dat = 'homestay' AND dp.ma_dat_phong not in (select ma_dat_phong from checkout)", nativeQuery = true)
 	public List<Checkin> listHomestayByMaPhong(Integer maPhong);
+	
+	
+	@Query("SELECT dp from Checkin dp where dp.tenDangNhap = ?1 ")
+	Page<Checkin> findByTenDangNhap(String tenDangNhaP, Pageable pageable);
 	
 }

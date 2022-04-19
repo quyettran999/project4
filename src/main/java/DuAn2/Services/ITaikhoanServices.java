@@ -24,4 +24,7 @@ public interface ITaikhoanServices extends CrudRepository<Account, String> {
 	
 	@Query("select tk from Account tk where tk.username = ?1 and tk.password = ?2")
 	public List<Account> findUser(String tendangnhap,String matkhau);
+	
+	@Query("select tk from Account tk where tk.email = ?1")
+	public Account findbyEmail(String email);
 }

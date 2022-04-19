@@ -1,8 +1,9 @@
 package DuAn2.Controller;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
+import java.util.Optional;
+import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +12,10 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
-import org.springframework.stereotype.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -21,28 +25,65 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import DuAn2.Common.Common;
 import DuAn2.Model.Account;
+import DuAn2.Model.Checkin;
+import DuAn2.Model.Post;
 import DuAn2.Services.ITaikhoanServices;
-
+import DuAn2.Services.Ilsdtp;
+import DuAn2.Services.IttkhService;
 
 @Controller
 @Transactional
 public class UserController {
 	
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-	    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
-	    binder.registerCustomEditor(Date.class,  new CustomDateEditor(dateFormat, true));
-	}
 
 	@Autowired
 	ITaikhoanServices iTaikhoanServices;
+	@Autowired
+	Ilsdtp lsdatphong;
+	
+	int checklogin = 0;
 
 	@ModelAttribute(name = "changeURL")
 	public String changeURL() {
 		return "profile";
 	}
 	
+	@RequestMapping("/userlogin")
+	public String userlogin(ModelMap model, HttpServletRequest request, HttpServletResponse response) {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		if (checklogin == 1) {
+			model.addAttribute("message", "Username or password is incorrect");
+			checklogin = 0;
+		}
+		session = request.getSession();
+		return "login1";
+	}
+	
+	@RequestMapping(value="/userlogin", method = RequestMethod.POST)
+	public String actionUserLogin(ModelMap model, HttpServletRequest httpServletRequest, HttpServletResponse response,
+	                             @RequestParam("username") String username, @RequestParam("password") String password) {
+		password = Common.encode(password);
+		List<Account> l = iTaikhoanServices.findUser(username,password);
+
+		if (l.isEmpty()) {
+			checklogin = 1;
+			return "redirect:/userlogin";
+		} else {
+			HttpSession session = httpServletRequest.getSession();
+			session.setAttribute("user", username);
+			session.setAttribute("chucvu", l.get(0).getChucVu().getMaChucVu() + "");
+				return "redirect:/";
+		}
+	}
+	
+	@RequestMapping("/logout")
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "redirect:/home";
+	}
+		
 	@RequestMapping("/register")
 	public String register(ModelMap model, @ModelAttribute("account") Account account) {
 		return "register";
@@ -50,13 +91,21 @@ public class UserController {
 	
 	@RequestMapping(value="/register", method = RequestMethod.POST)
 	public String acctionRegister(ModelMap model, @Validated @ModelAttribute("account") Account account,
-			BindingResult errors) {
+			BindingResult errors, HttpServletRequest httpServletRequest) {
 		
+		String newpassword = httpServletRequest.getParameter("newpassword");
+	
 		String a = null;
 		try {
 			a = iTaikhoanServices.findById(account.getTenDangNhap()).get().getTenDangNhap();
 		} catch (Exception e) {
 			a = "null";
+		}
+		String email= null;
+		try {
+			email = iTaikhoanServices.findbyEmail(account.getEmail()).getEmail();
+		} catch (Exception e) {
+			email = "null";
 		}
 		if (errors.hasErrors()) {
 			model.addAttribute("errors", errors.getAllErrors());
@@ -65,23 +114,32 @@ public class UserController {
 			model.addAttribute("errortk", "Username is available");
 			return "register";
 		}
-		else {
-			model.addAttribute("taikhoan", new Account());
-			model.addAttribute("message", " Create account successfully!");
-			model.addAttribute("titlepage", "Add a new account");
-			account.setMatKhau(Common.encode(account.getMatKhau()));
-			Date today = new Date();
-			account.setNgayTao(today);
-			account.setGioTao(today);
-			iTaikhoanServices.save(account);
+		else {if(email.equals(account.getEmail())) {
+			model.addAttribute("errortk", "Email is available");
 			return "register";
+		}else {
+			if (!newpassword.equals(account.getMatKhau())){
+				model.addAttribute("errortk", "Confirm Pasword do not match");
+				return "register";
+			}else {
+				model.addAttribute("taikhoan", new Account());
+				model.addAttribute("message", " Create account successfully!");
+				model.addAttribute("titlepage", "Add a new account");
+				account.setMatKhau(Common.encode(account.getMatKhau()));
+				Date today = new Date();
+				account.setNgayTao(today);
+				account.setGioTao(today);
+				iTaikhoanServices.save(account);
+				return "register";
+				}
+			}
 		}
 	}
 	
 	@RequestMapping("/profile")
 	public String profile(ModelMap model , HttpServletRequest httpServletRequest) {
 		HttpSession session = httpServletRequest.getSession();
-		Account getUser = iTaikhoanServices.findById(session.getAttribute("nguoidung").toString()).get();
+		Account getUser = iTaikhoanServices.findById(session.getAttribute("user").toString()).get();
 		String message = httpServletRequest.getParameter("message");
 		model.addAttribute("message", message);
 		model.addAttribute("getUser", getUser);
@@ -94,34 +152,28 @@ public class UserController {
 			HttpServletRequest httpServletRequest, RedirectAttributes redirectAttrs) throws InterruptedException {
 		
 		HttpSession session = httpServletRequest.getSession();
-		Account user = iTaikhoanServices.findById(session.getAttribute("nguoidung").toString()).get();
+		Account user = iTaikhoanServices.findById(session.getAttribute("user").toString()).get();
 		String matkhau = getUser.getMatKhau();
 		matkhau=Common.encode(matkhau);
 		if (errors.hasErrors() ) {
 			model.addAttribute("errors", errors.getAllErrors());
 			return "profile";
 		} else  {
-			if(!matkhau.equals(user.getMatKhau() ) ){
-				model.addAttribute("errortk", "Current password is incorrect");
-				return "profile";
-			} else 	{
-			Date today = new Date();
 			getUser.setNgayTao(user.getNgayTao());
 			getUser.setGioTao(user.getGioTao());
-			getUser.setMatKhau(matkhau);
+			getUser.setMatKhau(user.getMatKhau());
 			iTaikhoanServices.save(getUser);
 			//model.addAttribute("message", "Update profile successfully");
 			redirectAttrs.addAttribute("message", "Update profile successfully");
 			return "redirect:/profile";
 //			return "profile";
-			}
 		}
 	}
 	
 	@RequestMapping("/change-Password")
 	public String changePassword(HttpServletRequest httpServletRequest, ModelMap model) {		
 		HttpSession session = httpServletRequest.getSession();
-		Account account = iTaikhoanServices.findById(session.getAttribute("nguoidung").toString()).get();
+		Account account = iTaikhoanServices.findById(session.getAttribute("user").toString()).get();
 		model.addAttribute("account", account);
 		model.addAttribute("titlepage", "Change Password");
 		return "change-password";
@@ -137,7 +189,7 @@ public class UserController {
 		account.setMatKhau(Common.encode(account.getMatKhau()));
 		model.addAttribute("titlepage", "Change Password");
 		HttpSession session = httpServletRequest.getSession();
-		Account getAccount = iTaikhoanServices.findById(session.getAttribute("nguoidung").toString()).get();
+		Account getAccount = iTaikhoanServices.findById(session.getAttribute("user").toString()).get();
 		if (!oldPassword.equals(getAccount.getMatKhau())) {
 			model.addAttribute("messageloi", "Current password is incorrect");
 			account.setMatKhau("");
@@ -157,5 +209,16 @@ public class UserController {
 			return "change-password";
 		}
 	}
-
+	
+	@RequestMapping("/bookinghistory")
+	public String bookingHisory(ModelMap model , HttpServletRequest httpServletRequest, @RequestParam("p") Optional<Integer> p) {
+		HttpSession session = httpServletRequest.getSession();
+		Pageable pageable = PageRequest.of(p.orElse(0), 10);
+		String user= session.getAttribute("user").toString();
+    	Page<Checkin> bookinghistory= lsdatphong.findByTenDangNhap(user, pageable);
+    	
+		model.addAttribute("bookingh", bookinghistory);
+		return "booking_history";
+	}
+	
 }

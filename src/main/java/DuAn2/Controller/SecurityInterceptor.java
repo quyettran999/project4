@@ -26,12 +26,14 @@ public class SecurityInterceptor extends HandlerInterceptorAdapter {
 //			response.sendRedirect(request.getContextPath() + "/dangnhap");
 //			return false;
 //		}
-		if (session.getAttribute("nguoidung") == null) {
+		if (session.getAttribute("nguoidung") == null || session.getAttribute("chucvu").equals("3")) {
 			if (request.getServletPath().equalsIgnoreCase( "/qltk") || request.getServletPath().equalsIgnoreCase("/addtk")
 				   || request.getServletPath().equalsIgnoreCase("/addqlp" )|| request.getServletPath().equalsIgnoreCase("/qlp")
 				   || request.getServletPath().equalsIgnoreCase("/addlp") || request.getServletPath().equalsIgnoreCase("/dsqldv")
 				   || request.getServletPath().equalsIgnoreCase( "/qllp") || request.getServletPath().equalsIgnoreCase("/themdsqldv")
-				   || request.getServletPath().equalsIgnoreCase("/dptp")){
+				   || request.getServletPath().equalsIgnoreCase("/dptp") || request.getServletPath().equalsIgnoreCase("/post_management")
+				   || request.getServletPath().equalsIgnoreCase("/newPost")|| request.getServletPath().equalsIgnoreCase("/pddv")
+				   || request.getServletPath().equalsIgnoreCase("/thuchi")){
 				response.sendRedirect(request.getContextPath() + "/login");
 				return false;
 			}

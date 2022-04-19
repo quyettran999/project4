@@ -76,20 +76,20 @@
 				</ul>
 				<a href="booking" class="ml-3 book btn btn-secondary btn-style">Book
 					Now</a>
-				<c:if test="${nguoidung == null}">
-					<a href="login" class="ml-3 book btn btn-success btn-style">Login</a>
-					<a href="register" class="ml-3 book btn btn-success btn-style">register</a>
+				<c:if test="${user == null}">
+					<a href="userlogin" class="ml-3 book btn btn-success btn-style">Login</a>
 				</c:if>
-				<c:if test="${nguoidung !=null}">
+				<c:if test="${user !=null}">
 					<div class="dropdown show">
 					  <a class="ml-3 btn btn-success btn-style dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    ${nguoidung }
+					    ${user }
 					  </a>
 					
 					  <div class="dropdown-menu">
 					    <a class="dropdown-item" href="profile">Profile Details</a>
+					    <a class="dropdown-item" href="bookinghistory">Booking History</a>
 					    <a class="dropdown-item" href="change-Password">Change Passwrod</a>
-					    <a class="dropdown-item hoverUser" href="dangxuat">Log-Out</a>
+					    <a class="dropdown-item hoverUser" href="logout">Log-Out</a>
 					  </div>
 					</div>
 				</c:if>
